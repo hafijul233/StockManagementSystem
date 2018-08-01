@@ -44,22 +44,36 @@ namespace StockManagementSystem.UI
 
         private void StockOutButton_Click(object sender, EventArgs e)
         {
-
+            StockOut stockOut = new StockOut();
+            stockOut.Show(this);
         }
 
         private void ViewItemsButtons_Click(object sender, EventArgs e)
         {
-
+            ViewItems viewItems = new ViewItems();
+            viewItems.Show(this);
         }
 
         private void SalesButton_Click(object sender, EventArgs e)
         {
-
+            ViewSales viewSales = new ViewSales();
+            viewSales.Show(this);
         }
 
         private void ReportButton_Click(object sender, EventArgs e)
         {
+            Report report = new Report();
+            report.Show(this);
+        }
 
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LoginUi.ActiveForm.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

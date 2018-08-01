@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using StockManagementSystem.UI;
 using StockManagementSystem.Libraries;
+using StockManagementSystem.Models;
 using StockManagementSystem.DAL;
 
 namespace StockManagementSystem
@@ -17,7 +18,8 @@ namespace StockManagementSystem
     public partial class LoginUi : Form
     {
         Configuration configuration = new Configuration();
-        SqlConnection connection;
+
+        SqlConnection con = new SqlConnection(@"server=HRIDOY-PC\SQLEXPRESS; database=StockManagementSystem; integrated security=true;");
 
         public LoginUi()
         {
@@ -26,44 +28,64 @@ namespace StockManagementSystem
 
         private void LoginUi_Load(object sender, EventArgs e)
         {
-            connection = new SqlConnection(DatabaseConnection.ConnectionString());
+            /*connection = new SqlConnection(DatabaseConnection.ConnectionString());
             
-            if(connection.State == ConnectionState.Open)
+            if(connection.State != ConnectionState.Open)
             {
                 var dialogueResult = MessageBox.Show("There is a Problem Setting up a Database Connection.", configuration._prgogramTitle,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if(dialogueResult == DialogResult.OK)
                 {
-                    Application.Exit();
+                    //Application.Exit();
                 }
                 else
                 {
                     //e.Cancel = true;
                 }
-            }
+            }*/
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if(UserNameTextBox.Text == "admin" && PassWordTextBox.Text == "admin")
+            string username = UserNameTextBox.Text;
+            string password = PassWordTextBox.Text;
+
+            if(username == String.Empty || password == String.Empty)
             {
-                MainPage dashboard = new MainPage();
-                this.Hide();
-                dashboard.Show();
+                MessageBox.Show("Input Field is Empty");
             }
+
             else
             {
-                var dialoguResult = MessageBox.Show("Input Username or Password Didn't match.", configuration._prgogramTitle,
-                    MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                User person = new User();
+                person.Username = username;
+                person.Password = password;
 
-                if(dialoguResult == DialogResult.Retry)
+                string query = "SELECT * FROM UserInformation WHERE Username ='" + person.Username + "' AND Password ='" + person.Password + "'";
+                SqlCommand command = new SqlCommand(query, con);
+                con.Open();
+                SqlDataReader dr = command.ExecuteReader();
+                if (dr.Read())
                 {
-                    UserNameTextBox.Text = String.Empty;
-                    PassWordTextBox.Text = String.Empty;
+                    person.FullName = dr["FullName"].ToString();
+                    //MessageBox.Show(person.FullName);
+                    MainPage dashboard = new MainPage();
+                    this.Hide();
+                    dashboard.Show();
                 }
+                else
+                {
+                    var dialoguResult = MessageBox.Show("Input Username or Password Didn't match.", configuration._prgogramTitle,
+                                            MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+
+                    if(dialoguResult == DialogResult.Retry)
+                    {
+                        UserNameTextBox.Text = String.Empty;
+                        PassWordTextBox.Text = String.Empty;
+                    }
+                }
+            con.Close();
             }
-
-
         }
 
         private void RegisterlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

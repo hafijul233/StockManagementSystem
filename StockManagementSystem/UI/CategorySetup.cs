@@ -16,5 +16,10 @@ namespace StockManagementSystem.UI
         {
             InitializeComponent();
         }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

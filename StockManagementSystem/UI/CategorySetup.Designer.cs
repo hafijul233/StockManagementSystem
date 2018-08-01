@@ -30,20 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategorySetup));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cateListView1 = new System.Windows.Forms.ListView();
+            this.CategoryListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SaveButton = new System.Windows.Forms.Button();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.CategoynameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cateListView1);
+            this.groupBox1.Controls.Add(this.CategoryListView);
             this.groupBox1.Controls.Add(this.SaveButton);
-            this.groupBox1.Controls.Add(this.nameTextBox);
+            this.groupBox1.Controls.Add(this.CategoynameTextBox);
             this.groupBox1.Controls.Add(this.nameLabel1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -55,21 +55,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Category Setup Form";
             // 
-            // cateListView1
+            // CategoryListView
             // 
-            this.cateListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.CategoryListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.cateListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic);
-            this.cateListView1.GridLines = true;
-            this.cateListView1.Location = new System.Drawing.Point(42, 254);
-            this.cateListView1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.cateListView1.Name = "cateListView1";
-            this.cateListView1.Scrollable = false;
-            this.cateListView1.Size = new System.Drawing.Size(793, 324);
-            this.cateListView1.TabIndex = 11;
-            this.cateListView1.UseCompatibleStateImageBehavior = false;
-            this.cateListView1.View = System.Windows.Forms.View.Details;
+            this.CategoryListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic);
+            this.CategoryListView.GridLines = true;
+            this.CategoryListView.Location = new System.Drawing.Point(42, 254);
+            this.CategoryListView.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.CategoryListView.Name = "CategoryListView";
+            this.CategoryListView.Scrollable = false;
+            this.CategoryListView.Size = new System.Drawing.Size(793, 324);
+            this.CategoryListView.TabIndex = 11;
+            this.CategoryListView.UseCompatibleStateImageBehavior = false;
+            this.CategoryListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -91,15 +91,16 @@
             this.SaveButton.TabIndex = 10;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // nameTextBox
+            // CategoynameTextBox
             // 
-            this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTextBox.Location = new System.Drawing.Point(206, 112);
-            this.nameTextBox.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(580, 32);
-            this.nameTextBox.TabIndex = 9;
+            this.CategoynameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoynameTextBox.Location = new System.Drawing.Point(206, 112);
+            this.CategoynameTextBox.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.CategoynameTextBox.Name = "CategoynameTextBox";
+            this.CategoynameTextBox.Size = new System.Drawing.Size(580, 32);
+            this.CategoynameTextBox.TabIndex = 9;
             // 
             // nameLabel1
             // 
@@ -133,11 +134,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView cateListView1;
+        private System.Windows.Forms.ListView CategoryListView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox CategoynameTextBox;
         private System.Windows.Forms.Label nameLabel1;
     }
 }
