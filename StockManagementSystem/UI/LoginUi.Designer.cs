@@ -95,6 +95,7 @@
             this.ForgotPassWordlinkLabel.TabIndex = 9;
             this.ForgotPassWordlinkLabel.TabStop = true;
             this.ForgotPassWordlinkLabel.Text = "Forgot Password ?";
+            this.ForgotPassWordlinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ForgotPassWordlinkLabel_LinkClicked);
             // 
             // RegisterlinkLabel
             // 
@@ -107,6 +108,7 @@
             this.RegisterlinkLabel.TabIndex = 8;
             this.RegisterlinkLabel.TabStop = true;
             this.RegisterlinkLabel.Text = "Register New Account";
+            this.RegisterlinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RegisterlinkLabel_LinkClicked);
             // 
             // LoginButton
             // 
@@ -165,7 +167,8 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1024, 800);
             this.Name = "LoginUi";
-            this.Text = "Form1";
+            this.Text = "Stock Management System";
+            this.Load += new System.EventHandler(this.LoginUi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

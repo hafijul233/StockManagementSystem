@@ -1,6 +1,6 @@
 ﻿namespace StockManagementSystem.UI
 {
-    partial class Dashboard
+    partial class PasswordReceovery
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PasswordReceovery));
             this.SuspendLayout();
             // 
-            // Dashboard
+            // PasswordReceovery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Dashboard";
+            this.ClientSize = new System.Drawing.Size(1027, 562);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "PasswordReceovery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Dashboard";
+            this.Text = "PasswordReceovery";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PasswordReceovery_FormClosed);
             this.ResumeLayout(false);
 
         }

@@ -44,11 +44,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\DatabaseConnection.cs" />
+    <Compile Include="Libraries\Configuration.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\StockReport.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="UI\CategorySetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CategorySetup.Designer.cs">
+      <DependentUpon>CategorySetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CompanySetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CompanySetup.Designer.cs">
+      <DependentUpon>CompanySetup.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ItemSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ItemSetup.Designer.cs">
+      <DependentUpon>ItemSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\LoginUi.cs">
       <SubType>Form</SubType>
@@ -58,6 +89,42 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\PasswordReceovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PasswordReceovery.Designer.cs">
+      <DependentUpon>PasswordReceovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StockIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StockIn.Designer.cs">
+      <DependentUpon>StockIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\StockOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StockOut.Designer.cs">
+      <DependentUpon>StockOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ViewItems.Designer.cs">
+      <DependentUpon>ViewItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ViewSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ViewSales.Designer.cs">
+      <DependentUpon>ViewSales.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -66,12 +133,34 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\CategorySetup.resx">
+      <DependentUpon>CategorySetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CompanySetup.resx">
+      <DependentUpon>CompanySetup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\ItemSetup.resx">
+      <DependentUpon>ItemSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\LoginUi.resx">
       <DependentUpon>LoginUi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\PasswordReceovery.resx">
+      <DependentUpon>PasswordReceovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StockIn.resx">
+      <DependentUpon>StockIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StockOut.resx">
+      <DependentUpon>StockOut.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,13 +177,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BLL\" />
-    <Folder Include="DAL\" />
-    <Folder Include="Libraries\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\AppIcon.ico" />
     <Content Include="Resources\AppLoginBackground.png" />
+    <None Include="Resources\ViewItem.ico" />
+    <None Include="Resources\Category2.ico" />
+    <None Include="Resources\Company.ico" />
+    <Content Include="Resources\Dashboard.ico" />
+    <Content Include="Resources\Dashboard2.ico" />
+    <Content Include="Resources\Dashboard3.ico" />
+    <None Include="Resources\Item.ico" />
+    <None Include="Resources\Report.ico" />
+    <None Include="Resources\Sales.ico" />
+    <None Include="Resources\StockIn.ico" />
+    <None Include="Resources\StockOut.ico" />
     <Content Include="Resources\UserProfilePic.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
