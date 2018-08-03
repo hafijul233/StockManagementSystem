@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace StockManagementSystem.DAL
 {
-    public static class DatabaseConnection
+    public static class DBConnection
     {
-        public static string ConnectionString()
+        public static string connection()
         {
             string conString = @"server=HRIDOY-PC\SQLEXPRESS; database=StockManagementSystem; integrated security=true;";
 

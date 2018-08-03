@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cateListView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.saveButton1 = new System.Windows.Forms.Button();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.CompanynameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel1 = new System.Windows.Forms.Label();
+            this.WarningLabel = new System.Windows.Forms.Label();
+            this.CompanyDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CompanyDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cateListView1);
-            this.groupBox1.Controls.Add(this.saveButton1);
-            this.groupBox1.Controls.Add(this.nameTextBox);
+            this.groupBox1.Controls.Add(this.CompanyDataGridView);
+            this.groupBox1.Controls.Add(this.WarningLabel);
+            this.groupBox1.Controls.Add(this.SaveButton);
+            this.groupBox1.Controls.Add(this.CompanynameTextBox);
             this.groupBox1.Controls.Add(this.nameLabel1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -54,51 +55,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Company Setup Form";
             // 
-            // cateListView1
+            // SaveButton
             // 
-            this.cateListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.cateListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic);
-            this.cateListView1.GridLines = true;
-            this.cateListView1.Location = new System.Drawing.Point(42, 254);
-            this.cateListView1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.cateListView1.Name = "cateListView1";
-            this.cateListView1.Scrollable = false;
-            this.cateListView1.Size = new System.Drawing.Size(793, 324);
-            this.cateListView1.TabIndex = 11;
-            this.cateListView1.UseCompatibleStateImageBehavior = false;
-            this.cateListView1.View = System.Windows.Forms.View.Details;
+            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Location = new System.Drawing.Point(376, 167);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(199, 54);
+            this.SaveButton.TabIndex = 10;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // columnHeader1
+            // CompanynameTextBox
             // 
-            this.columnHeader1.Text = "SL";
-            this.columnHeader1.Width = 38;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Name";
-            this.columnHeader2.Width = 395;
-            // 
-            // saveButton1
-            // 
-            this.saveButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton1.Location = new System.Drawing.Point(376, 167);
-            this.saveButton1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.saveButton1.Name = "saveButton1";
-            this.saveButton1.Size = new System.Drawing.Size(199, 54);
-            this.saveButton1.TabIndex = 10;
-            this.saveButton1.Text = "Save";
-            this.saveButton1.UseVisualStyleBackColor = true;
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameTextBox.Location = new System.Drawing.Point(206, 112);
-            this.nameTextBox.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(580, 32);
-            this.nameTextBox.TabIndex = 9;
+            this.CompanynameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CompanynameTextBox.Location = new System.Drawing.Point(206, 112);
+            this.CompanynameTextBox.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.CompanynameTextBox.Name = "CompanynameTextBox";
+            this.CompanynameTextBox.Size = new System.Drawing.Size(580, 32);
+            this.CompanynameTextBox.TabIndex = 9;
             // 
             // nameLabel1
             // 
@@ -111,6 +87,23 @@
             this.nameLabel1.TabIndex = 8;
             this.nameLabel1.Text = "Company Name";
             // 
+            // WarningLabel
+            // 
+            this.WarningLabel.Location = new System.Drawing.Point(217, 38);
+            this.WarningLabel.Name = "WarningLabel";
+            this.WarningLabel.Size = new System.Drawing.Size(559, 59);
+            this.WarningLabel.TabIndex = 13;
+            this.WarningLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CompanyDataGridView
+            // 
+            this.CompanyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CompanyDataGridView.Location = new System.Drawing.Point(42, 259);
+            this.CompanyDataGridView.Name = "CompanyDataGridView";
+            this.CompanyDataGridView.RowTemplate.Height = 28;
+            this.CompanyDataGridView.Size = new System.Drawing.Size(787, 330);
+            this.CompanyDataGridView.TabIndex = 14;
+            // 
             // CompanySetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -122,8 +115,10 @@
             this.Name = "CompanySetup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompanySetup";
+            this.Load += new System.EventHandler(this.CompanySetup_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CompanyDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,11 +126,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView cateListView1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.Button saveButton1;
-        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.TextBox CompanynameTextBox;
         private System.Windows.Forms.Label nameLabel1;
+        private System.Windows.Forms.Label WarningLabel;
+        private System.Windows.Forms.DataGridView CompanyDataGridView;
     }
 }

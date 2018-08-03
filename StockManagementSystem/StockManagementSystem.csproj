@@ -44,7 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\DatabaseConnection.cs" />
+    <Compile Include="DAL\DBConnection.cs" />
     <Compile Include="Libraries\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Company.cs" />

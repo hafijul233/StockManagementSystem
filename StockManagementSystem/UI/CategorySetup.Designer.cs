@@ -30,18 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategorySetup));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CategoryListView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.WarningLabel = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
             this.CategoynameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel1 = new System.Windows.Forms.Label();
+            this.CategoryDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoryDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.CategoryListView);
+            this.groupBox1.Controls.Add(this.CategoryDataGridView);
+            this.groupBox1.Controls.Add(this.WarningLabel);
             this.groupBox1.Controls.Add(this.SaveButton);
             this.groupBox1.Controls.Add(this.CategoynameTextBox);
             this.groupBox1.Controls.Add(this.nameLabel1);
@@ -55,31 +56,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Category Setup Form";
             // 
-            // CategoryListView
+            // WarningLabel
             // 
-            this.CategoryListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.CategoryListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic);
-            this.CategoryListView.GridLines = true;
-            this.CategoryListView.Location = new System.Drawing.Point(42, 254);
-            this.CategoryListView.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.CategoryListView.Name = "CategoryListView";
-            this.CategoryListView.Scrollable = false;
-            this.CategoryListView.Size = new System.Drawing.Size(793, 324);
-            this.CategoryListView.TabIndex = 11;
-            this.CategoryListView.UseCompatibleStateImageBehavior = false;
-            this.CategoryListView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "SL";
-            this.columnHeader1.Width = 38;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Name";
-            this.columnHeader2.Width = 395;
+            this.WarningLabel.Location = new System.Drawing.Point(216, 37);
+            this.WarningLabel.Name = "WarningLabel";
+            this.WarningLabel.Size = new System.Drawing.Size(559, 59);
+            this.WarningLabel.TabIndex = 12;
+            this.WarningLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SaveButton
             // 
@@ -113,6 +96,15 @@
             this.nameLabel1.TabIndex = 8;
             this.nameLabel1.Text = "Category Name";
             // 
+            // CategoryDataGridView
+            // 
+            this.CategoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CategoryDataGridView.Location = new System.Drawing.Point(42, 263);
+            this.CategoryDataGridView.Name = "CategoryDataGridView";
+            this.CategoryDataGridView.RowTemplate.Height = 28;
+            this.CategoryDataGridView.Size = new System.Drawing.Size(787, 330);
+            this.CategoryDataGridView.TabIndex = 13;
+            // 
             // CategorySetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -125,8 +117,10 @@
             this.Name = "CategorySetup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CategorySetup";
+            this.Load += new System.EventHandler(this.CategorySetup_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoryDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -134,11 +128,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListView CategoryListView;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.TextBox CategoynameTextBox;
         private System.Windows.Forms.Label nameLabel1;
+        private System.Windows.Forms.Label WarningLabel;
+        private System.Windows.Forms.DataGridView CategoryDataGridView;
     }
 }
