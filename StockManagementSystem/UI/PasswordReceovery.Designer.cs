@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PasswordReceovery));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.UsernameTextBox = new System.Windows.Forms.TextBox();
-            this.PasswordTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.FullnameTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.UsernameTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.RecoverButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -56,21 +56,21 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Password Receovery Form";
             // 
-            // label1
+            // FullnameTextBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "UserName:";
+            this.FullnameTextBox.Location = new System.Drawing.Point(182, 223);
+            this.FullnameTextBox.Name = "FullnameTextBox";
+            this.FullnameTextBox.Size = new System.Drawing.Size(376, 30);
+            this.FullnameTextBox.TabIndex = 5;
             // 
-            // UsernameTextBox
+            // label3
             // 
-            this.UsernameTextBox.Location = new System.Drawing.Point(182, 52);
-            this.UsernameTextBox.Name = "UsernameTextBox";
-            this.UsernameTextBox.Size = new System.Drawing.Size(376, 30);
-            this.UsernameTextBox.TabIndex = 1;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(46, 223);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 25);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Full Name:";
             // 
             // PasswordTextBox
             // 
@@ -88,21 +88,21 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Password:";
             // 
-            // FullnameTextBox
+            // UsernameTextBox
             // 
-            this.FullnameTextBox.Location = new System.Drawing.Point(182, 223);
-            this.FullnameTextBox.Name = "FullnameTextBox";
-            this.FullnameTextBox.Size = new System.Drawing.Size(376, 30);
-            this.FullnameTextBox.TabIndex = 5;
+            this.UsernameTextBox.Location = new System.Drawing.Point(182, 52);
+            this.UsernameTextBox.Name = "UsernameTextBox";
+            this.UsernameTextBox.Size = new System.Drawing.Size(376, 30);
+            this.UsernameTextBox.TabIndex = 1;
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 223);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Full Name:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(46, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "UserName:";
             // 
             // RecoverButton
             // 

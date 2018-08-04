@@ -156,11 +156,20 @@
     <EmbeddedResource Include="UI\PasswordReceovery.resx">
       <DependentUpon>PasswordReceovery.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\StockIn.resx">
       <DependentUpon>StockIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\StockOut.resx">
       <DependentUpon>StockOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ViewItems.resx">
+      <DependentUpon>ViewItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ViewSales.resx">
+      <DependentUpon>ViewSales.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompanySetup));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CompanyDataGridView = new System.Windows.Forms.DataGridView();
             this.WarningLabel = new System.Windows.Forms.Label();
@@ -48,10 +49,9 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(583, 408);
+            this.groupBox1.Size = new System.Drawing.Size(866, 609);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Company Setup Form";
@@ -59,29 +59,27 @@
             // CompanyDataGridView
             // 
             this.CompanyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CompanyDataGridView.Location = new System.Drawing.Point(28, 168);
-            this.CompanyDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CompanyDataGridView.Location = new System.Drawing.Point(42, 258);
             this.CompanyDataGridView.Name = "CompanyDataGridView";
             this.CompanyDataGridView.RowTemplate.Height = 28;
-            this.CompanyDataGridView.Size = new System.Drawing.Size(525, 214);
+            this.CompanyDataGridView.Size = new System.Drawing.Size(788, 329);
             this.CompanyDataGridView.TabIndex = 14;
             // 
             // WarningLabel
             // 
-            this.WarningLabel.Location = new System.Drawing.Point(145, 25);
-            this.WarningLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.WarningLabel.Location = new System.Drawing.Point(218, 38);
             this.WarningLabel.Name = "WarningLabel";
-            this.WarningLabel.Size = new System.Drawing.Size(373, 38);
+            this.WarningLabel.Size = new System.Drawing.Size(560, 58);
             this.WarningLabel.TabIndex = 13;
             this.WarningLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SaveButton
             // 
             this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveButton.Location = new System.Drawing.Point(251, 109);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.SaveButton.Location = new System.Drawing.Point(376, 168);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(133, 35);
+            this.SaveButton.Size = new System.Drawing.Size(200, 54);
             this.SaveButton.TabIndex = 10;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -90,32 +88,32 @@
             // CompanynameTextBox
             // 
             this.CompanynameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CompanynameTextBox.Location = new System.Drawing.Point(137, 73);
-            this.CompanynameTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.CompanynameTextBox.Location = new System.Drawing.Point(206, 112);
+            this.CompanynameTextBox.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.CompanynameTextBox.Name = "CompanynameTextBox";
-            this.CompanynameTextBox.Size = new System.Drawing.Size(388, 24);
+            this.CompanynameTextBox.Size = new System.Drawing.Size(580, 32);
             this.CompanynameTextBox.TabIndex = 9;
             // 
             // nameLabel1
             // 
             this.nameLabel1.AutoSize = true;
             this.nameLabel1.Font = new System.Drawing.Font("MS Reference Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel1.Location = new System.Drawing.Point(25, 76);
-            this.nameLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.nameLabel1.Location = new System.Drawing.Point(38, 117);
+            this.nameLabel1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.nameLabel1.Name = "nameLabel1";
-            this.nameLabel1.Size = new System.Drawing.Size(111, 15);
+            this.nameLabel1.Size = new System.Drawing.Size(159, 22);
             this.nameLabel1.TabIndex = 8;
             this.nameLabel1.Text = "Company Name";
             // 
             // CompanySetup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 408);
+            this.ClientSize = new System.Drawing.Size(866, 609);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(599, 452);
+            this.MaximumSize = new System.Drawing.Size(888, 665);
             this.Name = "CompanySetup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CompanySetup";

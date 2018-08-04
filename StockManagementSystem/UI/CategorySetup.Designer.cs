@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategorySetup));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CategoryDataGridView = new System.Windows.Forms.DataGridView();
             this.WarningLabel = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
             this.CategoynameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel1 = new System.Windows.Forms.Label();
-            this.CategoryDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CategoryDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Category Setup Form";
+            // 
+            // CategoryDataGridView
+            // 
+            this.CategoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CategoryDataGridView.Location = new System.Drawing.Point(42, 263);
+            this.CategoryDataGridView.Name = "CategoryDataGridView";
+            this.CategoryDataGridView.RowTemplate.Height = 28;
+            this.CategoryDataGridView.Size = new System.Drawing.Size(787, 330);
+            this.CategoryDataGridView.TabIndex = 13;
             // 
             // WarningLabel
             // 
@@ -95,15 +104,6 @@
             this.nameLabel1.Size = new System.Drawing.Size(156, 22);
             this.nameLabel1.TabIndex = 8;
             this.nameLabel1.Text = "Category Name";
-            // 
-            // CategoryDataGridView
-            // 
-            this.CategoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CategoryDataGridView.Location = new System.Drawing.Point(42, 263);
-            this.CategoryDataGridView.Name = "CategoryDataGridView";
-            this.CategoryDataGridView.RowTemplate.Height = 28;
-            this.CategoryDataGridView.Size = new System.Drawing.Size(787, 330);
-            this.CategoryDataGridView.TabIndex = 13;
             // 
             // CategorySetup
             // 

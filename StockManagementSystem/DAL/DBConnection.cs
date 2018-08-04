@@ -10,7 +10,7 @@ namespace StockManagementSystem.DAL
     {
         public static string connection()
         {
-            string conString = @"server=DESKTOP-C43O4N8; database=StockManagementSystem; integrated security=true;";
+            string conString = @"server=HRIDOY-PC\SQLEXPRESS; database=StockManagementSystem; integrated security=true;";
 
             return conString;
         }

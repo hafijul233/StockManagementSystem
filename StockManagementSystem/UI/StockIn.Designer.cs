@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockIn));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
             this.reorderTextBox2 = new System.Windows.Forms.TextBox();
             this.reorderLabel4 = new System.Windows.Forms.Label();
@@ -38,10 +43,6 @@
             this.companyLabel2 = new System.Windows.Forms.Label();
             this.catComboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +70,41 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stock Input Form";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(279, 365);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(452, 30);
+            this.textBox1.TabIndex = 21;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(57, 365);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(178, 25);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Stock In Quantity";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(279, 172);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(452, 33);
+            this.comboBox1.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(120, 175);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 25);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Item Name";
             // 
             // SaveButton
             // 
@@ -151,47 +187,13 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Category";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(279, 172);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(452, 33);
-            this.comboBox1.TabIndex = 19;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(120, 175);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 25);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Item Name";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(279, 365);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(452, 30);
-            this.textBox1.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 365);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 25);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Stock In Quantity";
-            // 
             // StockIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 541);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StockIn";
             this.Text = "StockIn";
             this.groupBox1.ResumeLayout(false);
