@@ -19,7 +19,7 @@ namespace StockManagementSystem
     {
         Configuration configuration = new Configuration();
 
-        SqlConnection con = new SqlConnection(@"server=HRIDOY-PC\SQLEXPRESS; database=StockManagementSystem; integrated security=true;");
+        SqlConnection con = new SqlConnection(DBConnection.connection());
 
         public LoginUi()
         {
@@ -72,6 +72,7 @@ namespace StockManagementSystem
                     MainPage dashboard = new MainPage();
                     this.Hide();
                     dashboard.Show();
+            
                 }
                 else
                 {

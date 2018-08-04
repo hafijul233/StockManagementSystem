@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace StockManagementSystem.Models
 {
-    class Company
+     public class Company
     {
+         public string CompanyName { get; set; }
+
     }
 }

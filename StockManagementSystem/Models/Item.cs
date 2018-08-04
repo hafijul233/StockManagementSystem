@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace StockManagementSystem.Models
 {
-    class Item
+    public class Item
     {
+        public string Category { get; set; }
+        public string Company { get; set; }
+        public string ItemName{ get; set; }
+        public string ReorderLabel{ get; set; }
+
+
     }
 }
