@@ -30,18 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompanySetup));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CompanyDataGridView = new System.Windows.Forms.DataGridView();
             this.WarningLabel = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
             this.CompanynameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel1 = new System.Windows.Forms.Label();
+            this.CompanyNamelistView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CompanyDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.CompanyDataGridView);
+            this.groupBox1.Controls.Add(this.CompanyNamelistView);
             this.groupBox1.Controls.Add(this.WarningLabel);
             this.groupBox1.Controls.Add(this.SaveButton);
             this.groupBox1.Controls.Add(this.CompanynameTextBox);
@@ -55,15 +56,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Company Setup Form";
-            // 
-            // CompanyDataGridView
-            // 
-            this.CompanyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CompanyDataGridView.Location = new System.Drawing.Point(42, 258);
-            this.CompanyDataGridView.Name = "CompanyDataGridView";
-            this.CompanyDataGridView.RowTemplate.Height = 28;
-            this.CompanyDataGridView.Size = new System.Drawing.Size(788, 329);
-            this.CompanyDataGridView.TabIndex = 14;
             // 
             // WarningLabel
             // 
@@ -105,6 +97,31 @@
             this.nameLabel1.TabIndex = 8;
             this.nameLabel1.Text = "Company Name";
             // 
+            // CompanyNamelistView
+            // 
+            this.CompanyNamelistView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.CompanyNamelistView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CompanyNamelistView.FullRowSelect = true;
+            this.CompanyNamelistView.GridLines = true;
+            this.CompanyNamelistView.Location = new System.Drawing.Point(26, 259);
+            this.CompanyNamelistView.Name = "CompanyNamelistView";
+            this.CompanyNamelistView.Size = new System.Drawing.Size(814, 327);
+            this.CompanyNamelistView.TabIndex = 14;
+            this.CompanyNamelistView.UseCompatibleStateImageBehavior = false;
+            this.CompanyNamelistView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "SI";
+            this.columnHeader1.Width = 56;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Company Name";
+            this.columnHeader2.Width = 753;
+            // 
             // CompanySetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -120,7 +137,6 @@
             this.Load += new System.EventHandler(this.CompanySetup_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CompanyDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,6 +148,8 @@
         private System.Windows.Forms.TextBox CompanynameTextBox;
         private System.Windows.Forms.Label nameLabel1;
         private System.Windows.Forms.Label WarningLabel;
-        private System.Windows.Forms.DataGridView CompanyDataGridView;
+        private System.Windows.Forms.ListView CompanyNamelistView;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

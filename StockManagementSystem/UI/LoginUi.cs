@@ -12,13 +12,12 @@ using StockManagementSystem.UI;
 using StockManagementSystem.Libraries;
 using StockManagementSystem.Models;
 using StockManagementSystem.DAL;
+using StockManagementSystem.BLL;
 
 namespace StockManagementSystem
 {
     public partial class LoginUi : Form
     {
-        Configuration configuration = new Configuration();
-
         SqlConnection con = new SqlConnection(DBConnection.connection());
 
         public LoginUi()
@@ -47,51 +46,41 @@ namespace StockManagementSystem
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            string username = UserNameTextBox.Text;
+            /*string username = UserNameTextBox.Text;
             string password = PassWordTextBox.Text;
 
-            if(username == String.Empty || password == String.Empty)
+            if (username == String.Empty || password == String.Empty)
             {
                 MessageBox.Show("Input Field is Empty");
             }
 
             else
             {
-                User person = new User();
-                person.Username = username;
-                person.Password = password;
+                User person = new User(username, password);
 
-                string query = "SELECT * FROM UserInformation WHERE Username ='" + person.Username + "' AND Password ='" + person.Password + "'";
-                SqlCommand command = new SqlCommand(query, con);
-                con.Open();
-                SqlDataReader dr = command.ExecuteReader();
-                if (dr.Read())
-                {
-                    person.FullName = dr["FullName"].ToString();
-                    //MessageBox.Show(person.FullName);
+                if (LoginController.LoginCheck(person) != 0)
+                {*/
                     MainPage dashboard = new MainPage();
-                    this.Hide();
+                    Hide();
                     dashboard.Show();
-            
-                }
+                /*}
                 else
                 {
-                    var dialoguResult = MessageBox.Show("Input Username or Password Didn't match.", configuration._prgogramTitle,
-                                            MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    var dialogueResult = MessageBox.Show("User Information Didn't Match", Libraries.Configuration._prgogramTitle,
+                        MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
 
-                    if(dialoguResult == DialogResult.Retry)
+                    if (dialogueResult == DialogResult.Retry)
                     {
                         UserNameTextBox.Text = String.Empty;
                         PassWordTextBox.Text = String.Empty;
                     }
                 }
-            con.Close();
-            }
+            }*/
         }
 
         private void RegisterlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Please Contact System Administrator for Account Information. @ 01710534092.", configuration._prgogramTitle,
+            MessageBox.Show("Please Contact System Administrator for Account Information. @ 01710534092.", Libraries.Configuration._prgogramTitle,
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

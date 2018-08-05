@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace StockManagementSystem.Libraries
 {
-    public class Configuration
+    public static class Configuration
     {
-        public string _prgogramTitle = "Stock Management System";
+        public static string _prgogramTitle = "Stock Management System";
     }
 }

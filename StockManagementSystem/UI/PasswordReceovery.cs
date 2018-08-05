@@ -10,14 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StockManagementSystem.Models;
 using StockManagementSystem.Libraries;
-
+using StockManagementSystem.DAL;
 
 namespace StockManagementSystem.UI
 {
     public partial class PasswordReceovery : Form
     {
-        Configuration configuration = new Configuration();
-        SqlConnection con = new SqlConnection(@"server=HRIDOY-PC\SQLEXPRESS; database=StockManagementSystem; integrated security=true;");
+        SqlConnection connect = new SqlConnection(DBConnection.connection());
 
         public PasswordReceovery()
         {
@@ -31,31 +30,30 @@ namespace StockManagementSystem.UI
 
         private void RecoverButton_Click(object sender, EventArgs e)
         {
-            User person = new User();
-            person.Username = UsernameTextBox.Text;
-            person.Password = PasswordTextBox.Text;
-            person.FullName = FullnameTextBox.Text;
+            User person = new User(UsernameTextBox.Text, PasswordTextBox.Text, FullnameTextBox.Text);
 
             string query = "SELECT * FROM UserInformation WHERE Username ='" + person.Username + "' OR Password = '" + person.Password + "' OR FullName = '" + person.FullName + "'";
-            SqlCommand command = new SqlCommand(query, con);
-            con.Open();
+
+            SqlCommand command = new SqlCommand(query, connect);
+            connect.Open();
             SqlDataReader dr = command.ExecuteReader();
             if (dr.Read())
             {
-                person.FullName = dr["FullName"].ToString();
-                User person2 = new User();
-                person2.Username = dr["Username"].ToString();
-                person2.Password = dr["Password"].ToString();
-                person2.FullName = dr["FullName"].ToString();
+                
+                string Username = dr["Username"].ToString();
+                string Password = dr["Password"].ToString();
+                string FullName = dr["FullName"].ToString();
+
+                User personinfo = new User(Username, Password, FullName);
 
                 MessageBox.Show("\t\tUser Information\n==================================\nFullname: " +
-                    person2.FullName + "\nUsername: " + person2.Username + "\nPassword: " + person2.Password, 
-                        configuration._prgogramTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    personinfo.FullName + "\nUsername: " + personinfo.Username + "\nPassword: " + personinfo.Password, 
+                        Libraries.Configuration._prgogramTitle, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             else
             {
-                var dialoguResult = MessageBox.Show("Input Username, Password or Full Name Didn't match.", configuration._prgogramTitle,
+                var dialoguResult = MessageBox.Show("Input Username, Password or Full Name Didn't match.", Libraries.Configuration._prgogramTitle,
                                         MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
 
                 if (dialoguResult == DialogResult.OK)
@@ -69,7 +67,7 @@ namespace StockManagementSystem.UI
                     Application.Exit();
                 }
             }
-            con.Close();
+            connect.Close();
 
         }
     }

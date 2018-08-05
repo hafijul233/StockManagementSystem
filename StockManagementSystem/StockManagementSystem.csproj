@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CategoryController.cs" />
+    <Compile Include="BLL\CompanyController.cs" />
+    <Compile Include="BLL\LoginController.cs" />
     <Compile Include="DAL\DBConnection.cs" />
     <Compile Include="Libraries\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
@@ -125,6 +128,7 @@
     <Compile Include="UI\ViewSales.Designer.cs">
       <DependentUpon>ViewSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\SearchResult.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -184,9 +188,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Resources\AppIcon.ico" />
     <Content Include="Resources\AppLoginBackground.png" />

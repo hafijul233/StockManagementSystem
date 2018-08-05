@@ -30,18 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategorySetup));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CategoryDataGridView = new System.Windows.Forms.DataGridView();
             this.WarningLabel = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
             this.CategoynameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel1 = new System.Windows.Forms.Label();
+            this.CategoryNamelistView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CategoryDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.CategoryDataGridView);
+            this.groupBox1.Controls.Add(this.CategoryNamelistView);
             this.groupBox1.Controls.Add(this.WarningLabel);
             this.groupBox1.Controls.Add(this.SaveButton);
             this.groupBox1.Controls.Add(this.CategoynameTextBox);
@@ -55,15 +56,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Category Setup Form";
-            // 
-            // CategoryDataGridView
-            // 
-            this.CategoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CategoryDataGridView.Location = new System.Drawing.Point(42, 263);
-            this.CategoryDataGridView.Name = "CategoryDataGridView";
-            this.CategoryDataGridView.RowTemplate.Height = 28;
-            this.CategoryDataGridView.Size = new System.Drawing.Size(787, 330);
-            this.CategoryDataGridView.TabIndex = 13;
             // 
             // WarningLabel
             // 
@@ -105,6 +97,31 @@
             this.nameLabel1.TabIndex = 8;
             this.nameLabel1.Text = "Category Name";
             // 
+            // CategoryNamelistView
+            // 
+            this.CategoryNamelistView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.CategoryNamelistView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryNamelistView.FullRowSelect = true;
+            this.CategoryNamelistView.GridLines = true;
+            this.CategoryNamelistView.Location = new System.Drawing.Point(26, 266);
+            this.CategoryNamelistView.Name = "CategoryNamelistView";
+            this.CategoryNamelistView.Size = new System.Drawing.Size(814, 327);
+            this.CategoryNamelistView.TabIndex = 13;
+            this.CategoryNamelistView.UseCompatibleStateImageBehavior = false;
+            this.CategoryNamelistView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "SI";
+            this.columnHeader1.Width = 56;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Category Name";
+            this.columnHeader2.Width = 753;
+            // 
             // CategorySetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -120,7 +137,6 @@
             this.Load += new System.EventHandler(this.CategorySetup_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CategoryDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -132,6 +148,8 @@
         private System.Windows.Forms.TextBox CategoynameTextBox;
         private System.Windows.Forms.Label nameLabel1;
         private System.Windows.Forms.Label WarningLabel;
-        private System.Windows.Forms.DataGridView CategoryDataGridView;
+        private System.Windows.Forms.ListView CategoryNamelistView;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

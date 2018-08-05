@@ -1,5 +1,4 @@
-﻿using StockManagementSystem.Libraries;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,86 +8,67 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using StockManagementSystem.DAL;
+using StockManagementSystem.BLL;
 
 namespace StockManagementSystem.UI
 {
     public partial class CategorySetup : Form
     {
-        Configuration configuration = new Configuration();
-
-
-        SqlConnection con = new SqlConnection(DBConnection.connection());
-
         public CategorySetup()
         {
             InitializeComponent();
         }
 
+        private void CategorySetup_Load(object sender, EventArgs e)
+        {
+            DisplayList();
+        }
+
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            string name = CategoynameTextBox.Text;
-            if(name == String.Empty)
+            string categoryName = CategoynameTextBox.Text;
+
+            if(categoryName == String.Empty)
             {
-                WarningLabel.Text = "Input Company Name is Empty";
+                WarningLabel.Text = "Input Category Name is Empty";
+            }
+            else if (CategoryController.TestCategoryName(categoryName) == (int)Utilities.SearchResult.Found)
+            {
+                WarningLabel.Text = categoryName + " is Already Exist.";
+            }
+            else if(CategoryController.InsertCategory(categoryName) != 0)
+            {
+                WarningLabel.Text = categoryName + " Added to Category List.";
             }
             else
             {
-                string query = "SELECT Name FROM CategoryInfo WHERE Name ='" + name +"'";
-                SqlCommand command = new SqlCommand(query, con);
-                if(con.State == ConnectionState.Open)
-                {
-                    con.Close();
-                }
-                con.Open();
-                SqlDataReader dr = command.ExecuteReader();
-                if (dr.Read())
-                {
-                    WarningLabel.Text = "Category is Already Exited.";
-                    con.Close();
-                }
-                else
-                {
-                    con.Close();
-                    query = @"INSERT INTO CategoryInfo(Name) VALUES ('" + name + "')";
-
-                    command = new SqlCommand(query, con);
-                    con.Open();
-
-                    int isRowAffected = command.ExecuteNonQuery();
-
-                    if(isRowAffected != 0)
-                    {
-                        WarningLabel.Text = name + "Added Successfully.";
-                    }
-                    else
-                    {
-                        WarningLabel.Text = name + "Insertation Failed.";
-                    }
-                con.Close();
-                }
+                WarningLabel.Text = categoryName + " Insertation Failed.";
             }
 
-            dataLoad();
+            DisplayList();
         }
 
-        private void CategorySetup_Load(object sender, EventArgs e)
+        private void DisplayList()
         {
-            dataLoad();
+            List<string> categoryList = new List<string>();
 
-        }
+            CategoryNamelistView.Clear();
+            categoryList.Clear();
 
-        private void dataLoad()
-        {
-            string query = "SELECT Id AS SI, Name AS Category_Name FROM CategoryInfo";
-            con.Open();
-            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, con);
+            CategoryNamelistView.Columns.Add("SI");
+            CategoryNamelistView.Columns.Add("Category Name");
 
-            DataTable CategoryTable = new DataTable();
-            sqlDataAdapter.Fill(CategoryTable);
+            categoryList = CategoryController.GetCategoryList();
 
-            CategoryDataGridView.DataSource = CategoryTable;
-
+            for(int i = 1; i<categoryList.Count; i++)
+            {
+                string[] arr = new string[2];
+                    ListViewItem itm; 
+                arr[0] = i.ToString();
+                arr[1] = categoryList[i].ToString();
+                itm = new ListViewItem(arr);
+                CategoryNamelistView.Items.Add(itm);
+            }
         }
     }
 }

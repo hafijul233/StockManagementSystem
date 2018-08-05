@@ -17,6 +17,11 @@ namespace StockManagementSystem.UI
             InitializeComponent();
         }
 
+        private void MainPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void CategorySetupButton_Click(object sender, EventArgs e)
         {
             CategorySetup categorySetup = new CategorySetup();
@@ -74,11 +79,6 @@ namespace StockManagementSystem.UI
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void MainPage_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

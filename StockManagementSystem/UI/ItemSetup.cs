@@ -9,14 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockManagementSystem.DAL;
 
 namespace StockManagementSystem.UI
 {
     public partial class ItemSetup : Form
     {
-        Configuration configuration = new Configuration();
-
-        SqlConnection con = new SqlConnection(@"server=HRIDOY-PC\SQLEXPRESS; database=StockManagementSystem; integrated security=true;");
+        
+        SqlConnection con = new SqlConnection(DBConnection.connection());
 
         public ItemSetup()
         {
