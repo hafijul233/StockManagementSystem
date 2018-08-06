@@ -19,7 +19,7 @@ namespace StockManagementSystem
 {
     public partial class LoginUi : Form
     {
-        SqlConnection con = new SqlConnection(DBConnection.connection());
+        SqlConnection connection = new SqlConnection(DBConnection.connection());
 
         public LoginUi()
         {
@@ -28,26 +28,12 @@ namespace StockManagementSystem
 
         private void LoginUi_Load(object sender, EventArgs e)
         {
-            /*connection = new SqlConnection(DatabaseConnection.ConnectionString());
-            
-            if(connection.State != ConnectionState.Open)
-            {
-                var dialogueResult = MessageBox.Show("There is a Problem Setting up a Database Connection.", configuration._prgogramTitle,
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                if(dialogueResult == DialogResult.OK)
-                {
-                    //Application.Exit();
-                }
-                else
-                {
-                    //e.Cancel = true;
-                }
-            }*/
+           
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            /*string username = UserNameTextBox.Text;
+            string username = UserNameTextBox.Text;
             string password = PassWordTextBox.Text;
 
             if (username == String.Empty || password == String.Empty)
@@ -59,12 +45,13 @@ namespace StockManagementSystem
             {
                 User person = new User(username, password);
 
-                if (LoginController.LoginCheck(person) != 0)
-                {*/
+                if (LoginController.LoginCheck(person) != (int)SearchResult.NotFound)
+                {
                     MainPage dashboard = new MainPage();
                     Hide();
                     dashboard.Show();
-                /*}
+                }
+
                 else
                 {
                     var dialogueResult = MessageBox.Show("User Information Didn't Match", Libraries.Configuration._prgogramTitle,
@@ -76,7 +63,7 @@ namespace StockManagementSystem
                         PassWordTextBox.Text = String.Empty;
                     }
                 }
-            }*/
+            }
         }
 
         private void RegisterlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

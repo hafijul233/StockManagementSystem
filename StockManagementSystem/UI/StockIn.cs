@@ -13,6 +13,10 @@ namespace StockManagementSystem.UI
 {
     public partial class StockIn : Form
     {
+        List<string> companyList = new List<string>();
+        List<string> categoryList = new List<string>();
+        List<string> itemList = new List<string>();
+
         public StockIn()
         {
             InitializeComponent();
@@ -20,10 +24,6 @@ namespace StockManagementSystem.UI
 
         private void StockIn_Load(object sender, EventArgs e)
         {
-            List<string> companyList = new List<string>();
-            List<string> categoryList = new List<string>();
-            List<string> itemList = new List<string>();
-
             CompanyNameComboBox.Items.Clear();
             CategoryNameComboBox.Items.Clear();
             ItemNameComboBox.Items.Clear();
@@ -46,6 +46,21 @@ namespace StockManagementSystem.UI
             {
                 ItemNameComboBox.Items.Add(item.ToString());
             }
+
+        }
+
+        private void CategoryNameComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CompanyNameComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ItemNameComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
 
         }
     }

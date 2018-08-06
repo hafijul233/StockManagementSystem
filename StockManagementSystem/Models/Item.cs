@@ -10,9 +10,9 @@ namespace StockManagementSystem.Models
     {
         public string Category { get; set; }
         public string Company { get; set; }
-        public string ItemName{ get; set; }
-        public string ReorderLabel{ get; set; }
-
+        public string Name{ get; set; }
+        public double ReorderLevel{ get; set; }
+        public double AvaliableQty { get; set;}
 
     }
 }

@@ -45,29 +45,30 @@ namespace StockManagementSystem.UI
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            string itemName = ItemNameTextBox.Text;
-            string categoryName = CategoryNameComboBox.Text;
-            string companyName = CompanyNameComboBox.Text;
-
-            double reorderLevel = Convert.ToDouble(ReorderTextBox.Text);
-
-
-            if (itemName == String.Empty || categoryName == String.Empty || companyName == String.Empty || ReorderTextBox.Text == String.Empty)
+            if (ItemNameTextBox.Text == String.Empty || CategoryNameComboBox.Text == String.Empty || CompanyNameComboBox.Text == String.Empty || ReorderTextBox.Text == String.Empty)
             {
                 WarningLabel.Text = "Input Stream is Empty";
             }
 
-            else if (ItemController.TestItemName(itemName) == (int)Utilities.SearchResult.Found)
-            {
-                WarningLabel.Text = itemName + " is Already Exist.";
-            }
-            else if (ItemController.InsertItem(itemName, categoryName, companyName, reorderLevel) != 0)
-            {
-                WarningLabel.Text = itemName + " Added to Items List.";
-            }
             else
             {
-                WarningLabel.Text = itemName + " Insertation Failed.";
+                string itemName = ItemNameTextBox.Text;
+                string categoryName = CategoryNameComboBox.Text;
+                string companyName = CompanyNameComboBox.Text;
+                double reorderLevel = Convert.ToDouble(ReorderTextBox.Text);
+
+                if (ItemController.TestItemName(itemName) == (int)Utilities.SearchResult.Found)
+                {
+                    WarningLabel.Text = itemName + " is Already Exist.";
+                }
+                else if (ItemController.InsertItem(itemName, categoryName, companyName, reorderLevel) != 0)
+                {
+                    WarningLabel.Text = itemName + " Added to Items List.";
+                }
+                else
+                {
+                    WarningLabel.Text = itemName + " Insertation Failed.";
+                }
             }
         }
 

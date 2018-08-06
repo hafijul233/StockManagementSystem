@@ -101,6 +101,7 @@
             this.CompanyNameComboBox.Name = "CompanyNameComboBox";
             this.CompanyNameComboBox.Size = new System.Drawing.Size(452, 33);
             this.CompanyNameComboBox.TabIndex = 23;
+            this.CompanyNameComboBox.SelectedValueChanged += new System.EventHandler(this.CompanyNameComboBox_SelectedValueChanged);
             // 
             // CategoryNameComboBox
             // 
@@ -112,6 +113,7 @@
             this.CategoryNameComboBox.Name = "CategoryNameComboBox";
             this.CategoryNameComboBox.Size = new System.Drawing.Size(452, 33);
             this.CategoryNameComboBox.TabIndex = 22;
+            this.CategoryNameComboBox.SelectedValueChanged += new System.EventHandler(this.CategoryNameComboBox_SelectedValueChanged);
             // 
             // textBox1
             // 
@@ -138,6 +140,7 @@
             this.ItemNameComboBox.Name = "ItemNameComboBox";
             this.ItemNameComboBox.Size = new System.Drawing.Size(452, 33);
             this.ItemNameComboBox.TabIndex = 19;
+            this.ItemNameComboBox.SelectedValueChanged += new System.EventHandler(this.ItemNameComboBox_SelectedValueChanged);
             // 
             // label2
             // 
