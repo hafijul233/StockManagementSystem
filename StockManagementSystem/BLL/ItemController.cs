@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace StockManagementSystem.BLL
 {
-    class ItemController
+    public static class ItemController
     {
         private static int result = 0;
 
