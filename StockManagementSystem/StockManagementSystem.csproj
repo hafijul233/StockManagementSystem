@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="BLL\CategoryController.cs" />
     <Compile Include="BLL\CompanyController.cs" />
+    <Compile Include="BLL\ItemController.cs" />
     <Compile Include="BLL\LoginController.cs" />
     <Compile Include="DAL\DBConnection.cs" />
     <Compile Include="Libraries\Configuration.cs" />

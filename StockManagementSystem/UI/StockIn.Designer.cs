@@ -32,34 +32,34 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.ItemNameComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
-            this.reorderTextBox2 = new System.Windows.Forms.TextBox();
             this.reorderLabel4 = new System.Windows.Forms.Label();
-            this.itemTextBox1 = new System.Windows.Forms.TextBox();
             this.itemLabel3 = new System.Windows.Forms.Label();
-            this.companyComboBox = new System.Windows.Forms.ComboBox();
             this.companyLabel2 = new System.Windows.Forms.Label();
-            this.catComboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.CompanyNameComboBox = new System.Windows.Forms.ComboBox();
+            this.CategoryNameComboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.CompanyNameComboBox);
+            this.groupBox1.Controls.Add(this.CategoryNameComboBox);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.ItemNameComboBox);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.SaveButton);
-            this.groupBox1.Controls.Add(this.reorderTextBox2);
             this.groupBox1.Controls.Add(this.reorderLabel4);
-            this.groupBox1.Controls.Add(this.itemTextBox1);
             this.groupBox1.Controls.Add(this.itemLabel3);
-            this.groupBox1.Controls.Add(this.companyComboBox);
             this.groupBox1.Controls.Add(this.companyLabel2);
-            this.groupBox1.Controls.Add(this.catComboBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,14 +88,14 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Stock In Quantity";
             // 
-            // comboBox1
+            // ItemNameComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(279, 172);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(452, 33);
-            this.comboBox1.TabIndex = 19;
+            this.ItemNameComboBox.FormattingEnabled = true;
+            this.ItemNameComboBox.Location = new System.Drawing.Point(279, 172);
+            this.ItemNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ItemNameComboBox.Name = "ItemNameComboBox";
+            this.ItemNameComboBox.Size = new System.Drawing.Size(452, 33);
+            this.ItemNameComboBox.TabIndex = 19;
             // 
             // label2
             // 
@@ -117,14 +117,6 @@
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
             // 
-            // reorderTextBox2
-            // 
-            this.reorderTextBox2.Location = new System.Drawing.Point(279, 297);
-            this.reorderTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.reorderTextBox2.Name = "reorderTextBox2";
-            this.reorderTextBox2.Size = new System.Drawing.Size(452, 30);
-            this.reorderTextBox2.TabIndex = 16;
-            // 
             // reorderLabel4
             // 
             this.reorderLabel4.AutoSize = true;
@@ -133,14 +125,6 @@
             this.reorderLabel4.Size = new System.Drawing.Size(188, 25);
             this.reorderLabel4.TabIndex = 15;
             this.reorderLabel4.Text = "Available Quantity";
-            // 
-            // itemTextBox1
-            // 
-            this.itemTextBox1.Location = new System.Drawing.Point(279, 237);
-            this.itemTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.itemTextBox1.Name = "itemTextBox1";
-            this.itemTextBox1.Size = new System.Drawing.Size(452, 30);
-            this.itemTextBox1.TabIndex = 14;
             // 
             // itemLabel3
             // 
@@ -151,15 +135,6 @@
             this.itemLabel3.TabIndex = 13;
             this.itemLabel3.Text = "Reorder Level";
             // 
-            // companyComboBox
-            // 
-            this.companyComboBox.FormattingEnabled = true;
-            this.companyComboBox.Location = new System.Drawing.Point(279, 111);
-            this.companyComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.companyComboBox.Name = "companyComboBox";
-            this.companyComboBox.Size = new System.Drawing.Size(452, 33);
-            this.companyComboBox.TabIndex = 12;
-            // 
             // companyLabel2
             // 
             this.companyLabel2.AutoSize = true;
@@ -168,15 +143,6 @@
             this.companyLabel2.Size = new System.Drawing.Size(104, 25);
             this.companyLabel2.TabIndex = 11;
             this.companyLabel2.Text = "Company";
-            // 
-            // catComboBox1
-            // 
-            this.catComboBox1.FormattingEnabled = true;
-            this.catComboBox1.Location = new System.Drawing.Point(279, 49);
-            this.catComboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.catComboBox1.Name = "catComboBox1";
-            this.catComboBox1.Size = new System.Drawing.Size(452, 33);
-            this.catComboBox1.TabIndex = 10;
             // 
             // label1
             // 
@@ -187,6 +153,48 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Category";
             // 
+            // CompanyNameComboBox
+            // 
+            this.CompanyNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CompanyNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CompanyNameComboBox.FormattingEnabled = true;
+            this.CompanyNameComboBox.Location = new System.Drawing.Point(279, 108);
+            this.CompanyNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CompanyNameComboBox.Name = "CompanyNameComboBox";
+            this.CompanyNameComboBox.Size = new System.Drawing.Size(452, 33);
+            this.CompanyNameComboBox.TabIndex = 23;
+            // 
+            // CategoryNameComboBox
+            // 
+            this.CategoryNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CategoryNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CategoryNameComboBox.FormattingEnabled = true;
+            this.CategoryNameComboBox.Location = new System.Drawing.Point(279, 46);
+            this.CategoryNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CategoryNameComboBox.Name = "CategoryNameComboBox";
+            this.CategoryNameComboBox.Size = new System.Drawing.Size(452, 33);
+            this.CategoryNameComboBox.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(274, 240);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 25);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "<View>";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(274, 300);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 25);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "<View>";
+            // 
             // StockIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -196,6 +204,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StockIn";
             this.Text = "StockIn";
+            this.Load += new System.EventHandler(this.StockIn_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -206,17 +215,17 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.TextBox reorderTextBox2;
         private System.Windows.Forms.Label reorderLabel4;
-        private System.Windows.Forms.TextBox itemTextBox1;
         private System.Windows.Forms.Label itemLabel3;
-        private System.Windows.Forms.ComboBox companyComboBox;
         private System.Windows.Forms.Label companyLabel2;
-        private System.Windows.Forms.ComboBox catComboBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox ItemNameComboBox;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox CompanyNameComboBox;
+        private System.Windows.Forms.ComboBox CategoryNameComboBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
     }
 }
