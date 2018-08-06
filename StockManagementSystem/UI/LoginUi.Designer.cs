@@ -168,6 +168,7 @@
             this.MaximumSize = new System.Drawing.Size(1024, 800);
             this.Name = "LoginUi";
             this.Text = "Stock Management System";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginUi_FormClosing);
             this.Load += new System.EventHandler(this.LoginUi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);

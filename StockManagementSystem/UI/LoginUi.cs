@@ -80,7 +80,7 @@ namespace StockManagementSystem
 
         private void RegisterlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Please Contact System Administrator for Account Information. @ 01710534092.", Libraries.Configuration._prgogramTitle,
+            MessageBox.Show("Please Contact System Administrator for Account Information. @ 01710534092.", Configuration._prgogramTitle,
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -89,6 +89,18 @@ namespace StockManagementSystem
             PasswordReceovery passwordReceovery = new PasswordReceovery();
             this.Hide();
             passwordReceovery.Show();
+        }
+
+        private void LoginUi_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            var dialogResult = MessageBox.Show("Do you really want to Exit", Configuration._prgogramTitle,
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dialogResult == DialogResult.Yes)
+                Application.ExitThread();
+
+            else
+                e.Cancel = true;
         }
     }
 }
