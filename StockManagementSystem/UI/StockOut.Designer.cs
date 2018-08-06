@@ -41,17 +41,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.reorderTextBox2 = new System.Windows.Forms.TextBox();
             this.reorderLabel4 = new System.Windows.Forms.Label();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.itemTextBox1 = new System.Windows.Forms.TextBox();
             this.itemLabel3 = new System.Windows.Forms.Label();
             this.companyComboBox = new System.Windows.Forms.ComboBox();
             this.companyLabel2 = new System.Windows.Forms.Label();
             this.catComboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.outListView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -185,11 +185,6 @@
             this.reorderLabel4.TabIndex = 46;
             this.reorderLabel4.Text = "Available Quantity";
             // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Company";
-            this.columnHeader3.Width = 213;
-            // 
             // itemTextBox1
             // 
             this.itemTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -249,21 +244,6 @@
             this.label1.TabIndex = 40;
             this.label1.Text = "Category";
             // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Item";
-            this.columnHeader2.Width = 161;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "SL";
-            this.columnHeader1.Width = 45;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Quantity";
-            this.columnHeader4.Width = 216;
-            // 
             // outListView1
             // 
             this.outListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -284,6 +264,26 @@
             this.outListView1.TabIndex = 39;
             this.outListView1.UseCompatibleStateImageBehavior = false;
             this.outListView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "SL";
+            this.columnHeader1.Width = 45;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Item";
+            this.columnHeader2.Width = 161;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Company";
+            this.columnHeader3.Width = 213;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Quantity";
+            this.columnHeader4.Width = 216;
             // 
             // StockOut
             // 

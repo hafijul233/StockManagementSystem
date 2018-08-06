@@ -126,7 +126,7 @@
             this.Name = "PasswordReceovery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PasswordReceovery";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.PasswordReceovery_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PasswordReceovery_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

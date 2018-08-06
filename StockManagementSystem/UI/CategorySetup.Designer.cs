@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CategorySetup));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CategoryNamelistView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.WarningLabel = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
             this.CategoynameTextBox = new System.Windows.Forms.TextBox();
             this.nameLabel1 = new System.Windows.Forms.Label();
-            this.CategoryNamelistView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +56,31 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Category Setup Form";
+            // 
+            // CategoryNamelistView
+            // 
+            this.CategoryNamelistView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.CategoryNamelistView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryNamelistView.FullRowSelect = true;
+            this.CategoryNamelistView.GridLines = true;
+            this.CategoryNamelistView.Location = new System.Drawing.Point(26, 266);
+            this.CategoryNamelistView.Name = "CategoryNamelistView";
+            this.CategoryNamelistView.Size = new System.Drawing.Size(814, 327);
+            this.CategoryNamelistView.TabIndex = 13;
+            this.CategoryNamelistView.UseCompatibleStateImageBehavior = false;
+            this.CategoryNamelistView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "SI";
+            this.columnHeader1.Width = 56;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Category Name";
+            this.columnHeader2.Width = 753;
             // 
             // WarningLabel
             // 
@@ -96,31 +121,6 @@
             this.nameLabel1.Size = new System.Drawing.Size(156, 22);
             this.nameLabel1.TabIndex = 8;
             this.nameLabel1.Text = "Category Name";
-            // 
-            // CategoryNamelistView
-            // 
-            this.CategoryNamelistView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.CategoryNamelistView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryNamelistView.FullRowSelect = true;
-            this.CategoryNamelistView.GridLines = true;
-            this.CategoryNamelistView.Location = new System.Drawing.Point(26, 266);
-            this.CategoryNamelistView.Name = "CategoryNamelistView";
-            this.CategoryNamelistView.Size = new System.Drawing.Size(814, 327);
-            this.CategoryNamelistView.TabIndex = 13;
-            this.CategoryNamelistView.UseCompatibleStateImageBehavior = false;
-            this.CategoryNamelistView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "SI";
-            this.columnHeader1.Width = 56;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Category Name";
-            this.columnHeader2.Width = 753;
             // 
             // CategorySetup
             // 

@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockIn));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CompanyNameComboBox = new System.Windows.Forms.ComboBox();
+            this.CategoryNameComboBox = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ItemNameComboBox = new System.Windows.Forms.ComboBox();
@@ -39,10 +43,6 @@
             this.itemLabel3 = new System.Windows.Forms.Label();
             this.companyLabel2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.CompanyNameComboBox = new System.Windows.Forms.ComboBox();
-            this.CategoryNameComboBox = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,6 +70,48 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stock Input Form";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(274, 300);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 25);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "<View>";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(274, 240);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 25);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "<View>";
+            // 
+            // CompanyNameComboBox
+            // 
+            this.CompanyNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CompanyNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CompanyNameComboBox.FormattingEnabled = true;
+            this.CompanyNameComboBox.Location = new System.Drawing.Point(279, 108);
+            this.CompanyNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CompanyNameComboBox.Name = "CompanyNameComboBox";
+            this.CompanyNameComboBox.Size = new System.Drawing.Size(452, 33);
+            this.CompanyNameComboBox.TabIndex = 23;
+            // 
+            // CategoryNameComboBox
+            // 
+            this.CategoryNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CategoryNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CategoryNameComboBox.FormattingEnabled = true;
+            this.CategoryNameComboBox.Location = new System.Drawing.Point(279, 46);
+            this.CategoryNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CategoryNameComboBox.Name = "CategoryNameComboBox";
+            this.CategoryNameComboBox.Size = new System.Drawing.Size(452, 33);
+            this.CategoryNameComboBox.TabIndex = 22;
             // 
             // textBox1
             // 
@@ -152,48 +194,6 @@
             this.label1.Size = new System.Drawing.Size(100, 25);
             this.label1.TabIndex = 9;
             this.label1.Text = "Category";
-            // 
-            // CompanyNameComboBox
-            // 
-            this.CompanyNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.CompanyNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CompanyNameComboBox.FormattingEnabled = true;
-            this.CompanyNameComboBox.Location = new System.Drawing.Point(279, 108);
-            this.CompanyNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CompanyNameComboBox.Name = "CompanyNameComboBox";
-            this.CompanyNameComboBox.Size = new System.Drawing.Size(452, 33);
-            this.CompanyNameComboBox.TabIndex = 23;
-            // 
-            // CategoryNameComboBox
-            // 
-            this.CategoryNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.CategoryNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CategoryNameComboBox.FormattingEnabled = true;
-            this.CategoryNameComboBox.Location = new System.Drawing.Point(279, 46);
-            this.CategoryNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CategoryNameComboBox.Name = "CategoryNameComboBox";
-            this.CategoryNameComboBox.Size = new System.Drawing.Size(452, 33);
-            this.CategoryNameComboBox.TabIndex = 22;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(274, 240);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 25);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "<View>";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(274, 300);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 25);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "<View>";
             // 
             // StockIn
             // 

@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using StockManagementSystem.Models;
 using StockManagementSystem.Libraries;
 using StockManagementSystem.DAL;
+using StockManagementSystem.Utilities;
 
 namespace StockManagementSystem.UI
 {
@@ -21,11 +22,6 @@ namespace StockManagementSystem.UI
         public PasswordReceovery()
         {
             InitializeComponent();
-        }
-
-        private void PasswordReceovery_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            
         }
 
         private void RecoverButton_Click(object sender, EventArgs e)
@@ -69,6 +65,11 @@ namespace StockManagementSystem.UI
             }
             connect.Close();
 
+        }
+
+        private void PasswordReceovery_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseMessage.ApplicationClose(sender, e);
         }
     }
 }

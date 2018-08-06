@@ -13,6 +13,7 @@ using StockManagementSystem.Libraries;
 using StockManagementSystem.Models;
 using StockManagementSystem.DAL;
 using StockManagementSystem.BLL;
+using StockManagementSystem.Utilities;
 
 namespace StockManagementSystem
 {
@@ -93,14 +94,7 @@ namespace StockManagementSystem
 
         private void LoginUi_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var dialogResult = MessageBox.Show("Do you really want to Exit", Configuration._prgogramTitle,
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (dialogResult == DialogResult.Yes)
-                Application.ExitThread();
-
-            else
-                e.Cancel = true;
+            CloseMessage.ApplicationClose(sender, e);
         }
     }
 }

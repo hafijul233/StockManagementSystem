@@ -129,7 +129,7 @@
     <Compile Include="UI\ViewSales.Designer.cs">
       <DependentUpon>ViewSales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilities\AppCloseMessage.cs" />
+    <Compile Include="Utilities\CloseMessage.cs" />
     <Compile Include="Utilities\SearchResult.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

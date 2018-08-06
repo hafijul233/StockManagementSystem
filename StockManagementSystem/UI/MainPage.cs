@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StockManagementSystem.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -84,6 +85,11 @@ namespace StockManagementSystem.UI
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void MainPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CloseMessage.ApplicationClose(sender, e);
         }
     }
 }
