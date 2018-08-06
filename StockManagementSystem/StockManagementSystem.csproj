@@ -193,6 +193,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Database\Hafiz-SMS-06082018_04-04.sql" />
     <Content Include="Resources\AppIcon.ico" />
     <Content Include="Resources\AppLoginBackground.png" />
     <None Include="Resources\ViewItem.ico" />
