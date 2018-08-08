@@ -1,13 +1,16 @@
-﻿using StockManagementSystem.Utilities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockManagementSystem.DAL;
+using StockManagementSystem.Utilities;
+using StockManagementSystem.Models;
 
 namespace StockManagementSystem.UI
 {
@@ -20,6 +23,47 @@ namespace StockManagementSystem.UI
 
         private void MainPage_Load(object sender, EventArgs e)
         {
+            SqlConnection connect = new SqlConnection(DBConnection.connection());
+
+            string query = "SELECT Name, CategoryName, CompanyName, ReorderLevel, AvailableQuantity FROM ItemInfo WHERE AvailableQuantity <= ReorderLevel ORDER BY Id DESC";
+
+            SqlCommand command = new SqlCommand(query, connect);
+
+            if (connect.State == ConnectionState.Open)
+                connect.Close();
+            else
+                connect.Open();
+
+            SqlDataReader dataReader = command.ExecuteReader();
+
+            if (dataReader.HasRows)
+            {
+                int serial = 1;
+                while (dataReader.Read())
+                {
+                    Item item = new Item();
+
+                    item.Name = dataReader["Name"].ToString();
+                    item.Company = dataReader["CompanyName"].ToString();
+                    item.Category = dataReader["CategoryName"].ToString();
+                    item.AvaliableQty = Convert.ToDecimal(dataReader["AvailableQuantity"]);
+                    item.ReorderLevel = Convert.ToDecimal(dataReader["ReorderLevel"]);
+                    string si = Convert.ToString(serial);
+                    var lvi = new ListViewItem(new[] { si, item.Name, item.Company, item.Category, item.AvaliableQty.ToString(), item.ReorderLevel.ToString() });
+                    ItemsInfolistView.Items.Add(lvi);
+
+                    serial++;
+                }
+            }
+
+            connect.Close();
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            this.Hide();
+            mainPage.Show();
 
         }
 
@@ -91,5 +135,7 @@ namespace StockManagementSystem.UI
         {
             CloseMessage.ApplicationClose(sender, e);
         }
+
+        
     }
 }

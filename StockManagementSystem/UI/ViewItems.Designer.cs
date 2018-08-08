@@ -31,25 +31,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewItems));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.CategoryNamelistView = new System.Windows.Forms.ListView();
+            this.WarningLabel = new System.Windows.Forms.Label();
+            this.companyLabel2 = new System.Windows.Forms.Label();
+            this.SearchButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CompanyNameComboBox = new System.Windows.Forms.ComboBox();
+            this.CategoryNameComboBox = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ItemsNamelistView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SearchButton = new System.Windows.Forms.Button();
-            this.CompanyNameComboBox = new System.Windows.Forms.ComboBox();
-            this.companyLabel2 = new System.Windows.Forms.Label();
-            this.CategoryNameComboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.WarningLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -85,19 +85,9 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 317F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1119, 317);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.CategoryNamelistView);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 326);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1119, 621);
-            this.panel1.TabIndex = 1;
             // 
             // panel2
             // 
@@ -113,37 +103,23 @@
             this.panel2.Size = new System.Drawing.Size(665, 311);
             this.panel2.TabIndex = 0;
             // 
-            // CategoryNamelistView
+            // WarningLabel
             // 
-            this.CategoryNamelistView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.CategoryNamelistView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CategoryNamelistView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoryNamelistView.FullRowSelect = true;
-            this.CategoryNamelistView.GridLines = true;
-            this.CategoryNamelistView.Location = new System.Drawing.Point(0, 0);
-            this.CategoryNamelistView.Margin = new System.Windows.Forms.Padding(20);
-            this.CategoryNamelistView.Name = "CategoryNamelistView";
-            this.CategoryNamelistView.Size = new System.Drawing.Size(1117, 619);
-            this.CategoryNamelistView.TabIndex = 29;
-            this.CategoryNamelistView.UseCompatibleStateImageBehavior = false;
-            this.CategoryNamelistView.View = System.Windows.Forms.View.Details;
+            this.WarningLabel.Location = new System.Drawing.Point(66, 24);
+            this.WarningLabel.Name = "WarningLabel";
+            this.WarningLabel.Size = new System.Drawing.Size(559, 59);
+            this.WarningLabel.TabIndex = 29;
+            this.WarningLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // columnHeader1
+            // companyLabel2
             // 
-            this.columnHeader1.Text = "SI";
-            this.columnHeader1.Width = 56;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Item";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 753;
+            this.companyLabel2.AutoSize = true;
+            this.companyLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companyLabel2.Location = new System.Drawing.Point(28, 117);
+            this.companyLabel2.Name = "companyLabel2";
+            this.companyLabel2.Size = new System.Drawing.Size(104, 25);
+            this.companyLabel2.TabIndex = 26;
+            this.companyLabel2.Text = "Company";
             // 
             // SearchButton
             // 
@@ -157,38 +133,6 @@
             this.SearchButton.UseVisualStyleBackColor = true;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
-            // CompanyNameComboBox
-            // 
-            this.CompanyNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.CompanyNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CompanyNameComboBox.FormattingEnabled = true;
-            this.CompanyNameComboBox.Location = new System.Drawing.Point(173, 133);
-            this.CompanyNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CompanyNameComboBox.Name = "CompanyNameComboBox";
-            this.CompanyNameComboBox.Size = new System.Drawing.Size(452, 28);
-            this.CompanyNameComboBox.TabIndex = 27;
-            // 
-            // companyLabel2
-            // 
-            this.companyLabel2.AutoSize = true;
-            this.companyLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.companyLabel2.Location = new System.Drawing.Point(28, 132);
-            this.companyLabel2.Name = "companyLabel2";
-            this.companyLabel2.Size = new System.Drawing.Size(104, 25);
-            this.companyLabel2.TabIndex = 26;
-            this.companyLabel2.Text = "Company";
-            // 
-            // CategoryNameComboBox
-            // 
-            this.CategoryNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.CategoryNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CategoryNameComboBox.FormattingEnabled = true;
-            this.CategoryNameComboBox.Location = new System.Drawing.Point(173, 182);
-            this.CategoryNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CategoryNameComboBox.Name = "CategoryNameComboBox";
-            this.CategoryNameComboBox.Size = new System.Drawing.Size(452, 28);
-            this.CategoryNameComboBox.TabIndex = 25;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -199,34 +143,95 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Category";
             // 
+            // CompanyNameComboBox
+            // 
+            this.CompanyNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CompanyNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CompanyNameComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CompanyNameComboBox.FormattingEnabled = true;
+            this.CompanyNameComboBox.Location = new System.Drawing.Point(173, 118);
+            this.CompanyNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CompanyNameComboBox.Name = "CompanyNameComboBox";
+            this.CompanyNameComboBox.Size = new System.Drawing.Size(452, 33);
+            this.CompanyNameComboBox.TabIndex = 27;
+            // 
+            // CategoryNameComboBox
+            // 
+            this.CategoryNameComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.CategoryNameComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.CategoryNameComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryNameComboBox.FormattingEnabled = true;
+            this.CategoryNameComboBox.Location = new System.Drawing.Point(173, 182);
+            this.CategoryNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CategoryNameComboBox.Name = "CategoryNameComboBox";
+            this.CategoryNameComboBox.Size = new System.Drawing.Size(452, 33);
+            this.CategoryNameComboBox.TabIndex = 25;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.ItemsNamelistView);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 326);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1119, 621);
+            this.panel1.TabIndex = 1;
+            // 
+            // ItemsNamelistView
+            // 
+            this.ItemsNamelistView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.ItemsNamelistView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ItemsNamelistView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemsNamelistView.FullRowSelect = true;
+            this.ItemsNamelistView.GridLines = true;
+            this.ItemsNamelistView.Location = new System.Drawing.Point(0, 0);
+            this.ItemsNamelistView.Margin = new System.Windows.Forms.Padding(20);
+            this.ItemsNamelistView.Name = "ItemsNamelistView";
+            this.ItemsNamelistView.Size = new System.Drawing.Size(1117, 619);
+            this.ItemsNamelistView.TabIndex = 29;
+            this.ItemsNamelistView.UseCompatibleStateImageBehavior = false;
+            this.ItemsNamelistView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "SI";
+            this.columnHeader1.Width = 56;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Item";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 363;
+            // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Company";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 100;
+            this.columnHeader3.Width = 204;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Category";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 158;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Avaliable Quantity";
             this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 179;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Reorder Level";
             this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // WarningLabel
-            // 
-            this.WarningLabel.Location = new System.Drawing.Point(66, 43);
-            this.WarningLabel.Name = "WarningLabel";
-            this.WarningLabel.Size = new System.Drawing.Size(559, 59);
-            this.WarningLabel.TabIndex = 29;
-            this.WarningLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.columnHeader6.Width = 153;
             // 
             // ViewItems
             // 
@@ -241,9 +246,9 @@
             this.Load += new System.EventHandler(this.ViewItems_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -259,7 +264,7 @@
         private System.Windows.Forms.ComboBox CompanyNameComboBox;
         private System.Windows.Forms.ComboBox CategoryNameComboBox;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListView CategoryNamelistView;
+        private System.Windows.Forms.ListView ItemsNamelistView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

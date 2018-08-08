@@ -11,8 +11,8 @@ namespace StockManagementSystem.Models
         public string Category { get; set; }
         public string Company { get; set; }
         public string Name{ get; set; }
-        public double ReorderLevel{ get; set; }
-        public double AvaliableQty { get; set;}
+        public decimal ReorderLevel{ get; set; }
+        public decimal AvaliableQty { get; set;}
 
     }
 }

@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Category Setup");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Company Setup");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Item Setup");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Stock In");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Sales");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Damage");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Lost");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Srock Out", new System.Windows.Forms.TreeNode[] {
-            treeNode5,
-            treeNode6,
-            treeNode7});
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Report");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Home", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3,
-            treeNode4,
-            treeNode8,
-            treeNode9});
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Category Setup");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Company Setup");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Item Setup");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Stock In");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Sales");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Damage");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Lost");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Srock Out", new System.Windows.Forms.TreeNode[] {
+            treeNode15,
+            treeNode16,
+            treeNode17});
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Report");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Home", new System.Windows.Forms.TreeNode[] {
+            treeNode11,
+            treeNode12,
+            treeNode13,
+            treeNode14,
+            treeNode18,
+            treeNode19});
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,19 +67,17 @@
             this.ItemSetupButton = new System.Windows.Forms.Button();
             this.CompanySetupButton = new System.Windows.Forms.Button();
             this.CategorySetupButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.HomeButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.ItemsInfolistView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -196,7 +194,7 @@
             this.tableLayoutPanel2.Controls.Add(this.ItemSetupButton, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.CompanySetupButton, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.CategorySetupButton, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.HomeButton, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -333,20 +331,21 @@
             this.CategorySetupButton.UseVisualStyleBackColor = true;
             this.CategorySetupButton.Click += new System.EventHandler(this.CategorySetupButton_Click);
             // 
-            // button1
+            // HomeButton
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::StockManagementSystem.Properties.Resources.Dashboard3;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(10, 9);
-            this.button1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 141);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Home";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
+            this.HomeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HomeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeButton.Image = global::StockManagementSystem.Properties.Resources.Dashboard3;
+            this.HomeButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.HomeButton.Location = new System.Drawing.Point(10, 9);
+            this.HomeButton.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(130, 141);
+            this.HomeButton.TabIndex = 0;
+            this.HomeButton.Text = "Home";
+            this.HomeButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.HomeButton.UseVisualStyleBackColor = true;
+            this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -370,63 +369,61 @@
             this.treeView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Node1";
-            treeNode1.Text = "Category Setup";
-            treeNode2.Name = "Node2";
-            treeNode2.Text = "Company Setup";
-            treeNode3.Name = "Node3";
-            treeNode3.Text = "Item Setup";
-            treeNode4.Name = "Node0";
-            treeNode4.Text = "Stock In";
-            treeNode5.Name = "Node3";
-            treeNode5.Text = "Sales";
-            treeNode6.Name = "Node4";
-            treeNode6.Text = "Damage";
-            treeNode7.Name = "Node5";
-            treeNode7.Text = "Lost";
-            treeNode8.Name = "Node2";
-            treeNode8.Text = "Srock Out";
-            treeNode9.Name = "Node8";
-            treeNode9.Text = "Report";
-            treeNode10.Name = "Node0";
-            treeNode10.Text = "Home";
+            treeNode11.Name = "Node1";
+            treeNode11.Text = "Category Setup";
+            treeNode12.Name = "Node2";
+            treeNode12.Text = "Company Setup";
+            treeNode13.Name = "Node3";
+            treeNode13.Text = "Item Setup";
+            treeNode14.Name = "Node0";
+            treeNode14.Text = "Stock In";
+            treeNode15.Name = "Node3";
+            treeNode15.Text = "Sales";
+            treeNode16.Name = "Node4";
+            treeNode16.Text = "Damage";
+            treeNode17.Name = "Node5";
+            treeNode17.Text = "Lost";
+            treeNode18.Name = "Node2";
+            treeNode18.Text = "Srock Out";
+            treeNode19.Name = "Node8";
+            treeNode19.Text = "Report";
+            treeNode20.Name = "Node0";
+            treeNode20.Text = "Home";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode10});
+            treeNode20});
             this.treeView1.Size = new System.Drawing.Size(294, 506);
             this.treeView1.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel2.Controls.Add(this.listView1);
+            this.panel2.Controls.Add(this.ItemsInfolistView);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(303, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1470, 506);
+            this.panel2.Size = new System.Drawing.Size(1058, 506);
             this.panel2.TabIndex = 1;
             // 
-            // listView1
+            // ItemsInfolistView
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ItemsInfolistView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
-            this.columnHeader5,
-            this.columnHeader6,
             this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listView1.FullRowSelect = true;
-            this.listView1.GridLines = true;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1470, 506);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.columnHeader5,
+            this.columnHeader6});
+            this.ItemsInfolistView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ItemsInfolistView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemsInfolistView.FullRowSelect = true;
+            this.ItemsInfolistView.GridLines = true;
+            this.ItemsInfolistView.Location = new System.Drawing.Point(0, 0);
+            this.ItemsInfolistView.Name = "ItemsInfolistView";
+            this.ItemsInfolistView.Size = new System.Drawing.Size(1058, 506);
+            this.ItemsInfolistView.TabIndex = 0;
+            this.ItemsInfolistView.UseCompatibleStateImageBehavior = false;
+            this.ItemsInfolistView.View = System.Windows.Forms.View.Details;
+            this.ItemsInfolistView.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -436,12 +433,17 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Item Name";
-            this.columnHeader2.Width = 404;
+            this.columnHeader2.Width = 296;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Category";
             this.columnHeader3.Width = 156;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "Company";
+            this.columnHeader7.Width = 145;
             // 
             // columnHeader5
             // 
@@ -452,21 +454,6 @@
             // 
             this.columnHeader6.Text = "Reorder Qty";
             this.columnHeader6.Width = 160;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Sales";
-            this.columnHeader7.Width = 145;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Damaged";
-            this.columnHeader8.Width = 152;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "Lost";
-            this.columnHeader9.Width = 140;
             // 
             // MainPage
             // 
@@ -507,7 +494,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button HomeButton;
         private System.Windows.Forms.Button ReportButton;
         private System.Windows.Forms.Button SalesButton;
         private System.Windows.Forms.Button ViewItemsButtons;
@@ -518,14 +505,12 @@
         private System.Windows.Forms.Button CategorySetupButton;
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView ItemsInfolistView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
     }
 }
