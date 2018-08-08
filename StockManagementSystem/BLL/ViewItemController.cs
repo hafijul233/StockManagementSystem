@@ -13,7 +13,6 @@ namespace StockManagementSystem.BLL
 {
     public static class ViewItemController
     {
-        private static int result = 0;
 
         static SqlConnection connect = new SqlConnection(DBConnection.connection());
 

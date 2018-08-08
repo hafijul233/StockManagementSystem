@@ -133,18 +133,112 @@ namespace StockManagementSystem.UI
 
             stockitem.ItemName = ItemNameComboBox.Text;
             stockitem.CompanyName = CompanyNameComboBox.Text;
-            stockitem.StockQty = Convert.ToDecimal(StockOutTextBox.Text);
-
+            stockitem.StockOutQty = Convert.ToDecimal(StockOutTextBox.Text);
+            stockitem.AvaliableQty = Convert.ToDecimal(AvailableQuantityLabel.Text);
             stockOutList.Add(stockitem);
 
             string si = Convert.ToString(serial);
 
-            var lvi = new ListViewItem(new[] { si, stockitem.ItemName, stockitem.CompanyName, stockitem.StockQty.ToString()});
+            var lvi = new ListViewItem(new[] { si, stockitem.ItemName, stockitem.CompanyName, stockitem.StockOutQty.ToString()});
 
             StockOutListView.Items.Add(lvi);
             serial++;
 
             StockOutTextBox.Text = String.Empty;
+        }
+
+        private void SalesButton_Click(object sender, EventArgs e)
+        {
+            int Error = 0;
+
+            foreach (StockReport item in stockOutList)
+            {
+                if(StockOutController.InsertStockOut(item, "SALE") != 0)
+                {
+                    if(StockOutController.UpdateStock(item) == 0)
+                    {
+                        Error = 1;
+                        break;
+                    }
+                }
+                else
+                {
+                    Error = 1;
+                    break;
+                }
+            }
+
+            if(Error == 0)
+            {
+                MessageBox.Show("All Stock Were Updated.");
+            }
+            else
+            {
+                MessageBox.Show("Stock Update Failed.");
+            }
+        }
+
+        private void DamageButton_Click(object sender, EventArgs e)
+        {
+            int Error = 0;
+
+            foreach (StockReport item in stockOutList)
+            {
+                if (StockOutController.InsertStockOut(item, "DAMAGE") != 0)
+                {
+                    if (StockOutController.UpdateStock(item) == 0)
+                    {
+                        Error = 1;
+                        break;
+                    }
+                }
+                else
+                {
+                    Error = 1;
+                    break;
+                }
+            }
+
+            if (Error == 0)
+            {
+                MessageBox.Show("All Stock Were Updated.");
+            }
+            else
+            {
+                MessageBox.Show("Stock Update Failed.");
+            }
+        }
+
+        private void LostButton_Click(object sender, EventArgs e)
+        {
+            int Error = 0;
+
+            foreach (StockReport item in stockOutList)
+            {
+                if (StockOutController.InsertStockOut(item, "LOST") != 0)
+                {
+                    if (StockOutController.UpdateStock(item) == 0)
+                    {
+                        Error = 1;
+                        break;
+                    }
+                }
+                else
+                {
+                    Error = 1;
+                    break;
+                }
+            }
+
+            if (Error == 0)
+            {
+                MessageBox.Show("All Stock Were Updated.");
+            }
+            else
+            {
+                MessageBox.Show("Stock Update Failed.");
+            }
+
         }
     }
 }

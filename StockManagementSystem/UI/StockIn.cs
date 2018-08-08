@@ -121,7 +121,7 @@ namespace StockManagementSystem.UI
 
             decimal stockinqty = Convert.ToDecimal(StockInTextBox.Text);
 
-            if(ItemController.SetStockUpdate(item, stockinqty) != (int)Utilities.SearchResult.NotFound)
+            if(ItemController.SetStockIn(item, stockinqty) != (int)Utilities.SearchResult.NotFound)
             {
                 WarningLabel.Text = "StockIn Secussfull";
             }

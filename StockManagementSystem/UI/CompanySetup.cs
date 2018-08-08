@@ -41,7 +41,7 @@ namespace StockManagementSystem.UI
             }
             else if (CompanyController.InsertCompany(categoryName) != 0)
             {
-                WarningLabel.Text = categoryName + " Added to Category List.";
+                WarningLabel.Text = categoryName + " Added to Company List.";
             }
             else
             {

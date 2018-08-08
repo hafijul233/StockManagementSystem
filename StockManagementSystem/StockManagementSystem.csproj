@@ -48,6 +48,7 @@
     <Compile Include="BLL\CompanyController.cs" />
     <Compile Include="BLL\ItemController.cs" />
     <Compile Include="BLL\LoginController.cs" />
+    <Compile Include="BLL\StockOutController.cs" />
     <Compile Include="BLL\ViewItemController.cs" />
     <Compile Include="DAL\DBConnection.cs" />
     <Compile Include="Libraries\Configuration.cs" />
@@ -131,6 +132,7 @@
       <DependentUpon>ViewSales.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilities\CloseMessage.cs" />
+    <Compile Include="Utilities\FlagStatus.cs" />
     <Compile Include="Utilities\SearchResult.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -126,7 +126,7 @@ namespace StockManagementSystem.BLL
             return StockUpdate;
         }
 
-        public static int SetStockUpdate(Item item, decimal stockin)
+        public static int SetStockIn(Item item, decimal stockin)
         {
             decimal stock = item.AvaliableQty + stockin;
 
@@ -149,7 +149,6 @@ namespace StockManagementSystem.BLL
 
             return result;
 
-            return 0;
         }
     }
 }

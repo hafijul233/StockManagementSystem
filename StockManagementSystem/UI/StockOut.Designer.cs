@@ -34,24 +34,24 @@
             this.label3 = new System.Windows.Forms.Label();
             this.StockOutTextBox = new System.Windows.Forms.TextBox();
             this.AddButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.SalesButton = new System.Windows.Forms.Button();
+            this.DamageButton = new System.Windows.Forms.Button();
+            this.LostButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.StockOutListView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.WarningLabel = new System.Windows.Forms.Label();
+            this.AvailableQuantityLabel = new System.Windows.Forms.Label();
+            this.ReorderLevelLabel = new System.Windows.Forms.Label();
             this.CompanyNameComboBox = new System.Windows.Forms.ComboBox();
             this.CategoryNameComboBox = new System.Windows.Forms.ComboBox();
             this.ItemNameComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.companyLabel2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.AvailableQuantityLabel = new System.Windows.Forms.Label();
-            this.ReorderLevelLabel = new System.Windows.Forms.Label();
-            this.WarningLabel = new System.Windows.Forms.Label();
-            this.StockOutListView = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,38 +107,41 @@
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // button1
+            // SalesButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(276, 794);
-            this.button1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 54);
-            this.button1.TabIndex = 53;
-            this.button1.Text = "Sales";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SalesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalesButton.Location = new System.Drawing.Point(276, 794);
+            this.SalesButton.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.SalesButton.Name = "SalesButton";
+            this.SalesButton.Size = new System.Drawing.Size(199, 54);
+            this.SalesButton.TabIndex = 53;
+            this.SalesButton.Text = "Sales";
+            this.SalesButton.UseVisualStyleBackColor = true;
+            this.SalesButton.Click += new System.EventHandler(this.SalesButton_Click);
             // 
-            // button2
+            // DamageButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(540, 794);
-            this.button2.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(199, 54);
-            this.button2.TabIndex = 54;
-            this.button2.Text = "Damaged";
-            this.button2.UseVisualStyleBackColor = true;
+            this.DamageButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DamageButton.Location = new System.Drawing.Point(540, 794);
+            this.DamageButton.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.DamageButton.Name = "DamageButton";
+            this.DamageButton.Size = new System.Drawing.Size(199, 54);
+            this.DamageButton.TabIndex = 54;
+            this.DamageButton.Text = "Damaged";
+            this.DamageButton.UseVisualStyleBackColor = true;
+            this.DamageButton.Click += new System.EventHandler(this.DamageButton_Click);
             // 
-            // button3
+            // LostButton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(791, 794);
-            this.button3.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(199, 54);
-            this.button3.TabIndex = 55;
-            this.button3.Text = "Lost";
-            this.button3.UseVisualStyleBackColor = true;
+            this.LostButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LostButton.Location = new System.Drawing.Point(791, 794);
+            this.LostButton.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.LostButton.Name = "LostButton";
+            this.LostButton.Size = new System.Drawing.Size(199, 54);
+            this.LostButton.TabIndex = 55;
+            this.LostButton.Text = "Lost";
+            this.LostButton.UseVisualStyleBackColor = true;
+            this.LostButton.Click += new System.EventHandler(this.LostButton_Click);
             // 
             // groupBox1
             // 
@@ -152,9 +155,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.companyLabel2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.LostButton);
+            this.groupBox1.Controls.Add(this.DamageButton);
+            this.groupBox1.Controls.Add(this.SalesButton);
             this.groupBox1.Controls.Add(this.AddButton);
             this.groupBox1.Controls.Add(this.StockOutTextBox);
             this.groupBox1.Controls.Add(this.label3);
@@ -168,6 +171,75 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Stock Output Form";
+            // 
+            // StockOutListView
+            // 
+            this.StockOutListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.StockOutListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StockOutListView.FullRowSelect = true;
+            this.StockOutListView.GridLines = true;
+            this.StockOutListView.Location = new System.Drawing.Point(29, 394);
+            this.StockOutListView.Margin = new System.Windows.Forms.Padding(20);
+            this.StockOutListView.Name = "StockOutListView";
+            this.StockOutListView.Size = new System.Drawing.Size(1276, 376);
+            this.StockOutListView.TabIndex = 65;
+            this.StockOutListView.UseCompatibleStateImageBehavior = false;
+            this.StockOutListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "SI";
+            this.columnHeader1.Width = 56;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Item";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 236;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Company";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 286;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Quantity";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 232;
+            // 
+            // WarningLabel
+            // 
+            this.WarningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WarningLabel.Location = new System.Drawing.Point(978, 256);
+            this.WarningLabel.Name = "WarningLabel";
+            this.WarningLabel.Size = new System.Drawing.Size(308, 40);
+            this.WarningLabel.TabIndex = 64;
+            // 
+            // AvailableQuantityLabel
+            // 
+            this.AvailableQuantityLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AvailableQuantityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AvailableQuantityLabel.Location = new System.Drawing.Point(515, 223);
+            this.AvailableQuantityLabel.Name = "AvailableQuantityLabel";
+            this.AvailableQuantityLabel.Size = new System.Drawing.Size(450, 25);
+            this.AvailableQuantityLabel.TabIndex = 63;
+            this.AvailableQuantityLabel.Text = "<View>";
+            // 
+            // ReorderLevelLabel
+            // 
+            this.ReorderLevelLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ReorderLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReorderLevelLabel.Location = new System.Drawing.Point(515, 177);
+            this.ReorderLevelLabel.Name = "ReorderLevelLabel";
+            this.ReorderLevelLabel.Size = new System.Drawing.Size(450, 25);
+            this.ReorderLevelLabel.TabIndex = 62;
+            this.ReorderLevelLabel.Text = "<View>";
             // 
             // CompanyNameComboBox
             // 
@@ -230,75 +302,6 @@
             this.label1.TabIndex = 56;
             this.label1.Text = "Category";
             // 
-            // AvailableQuantityLabel
-            // 
-            this.AvailableQuantityLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AvailableQuantityLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AvailableQuantityLabel.Location = new System.Drawing.Point(515, 223);
-            this.AvailableQuantityLabel.Name = "AvailableQuantityLabel";
-            this.AvailableQuantityLabel.Size = new System.Drawing.Size(450, 25);
-            this.AvailableQuantityLabel.TabIndex = 63;
-            this.AvailableQuantityLabel.Text = "<View>";
-            // 
-            // ReorderLevelLabel
-            // 
-            this.ReorderLevelLabel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ReorderLevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReorderLevelLabel.Location = new System.Drawing.Point(515, 177);
-            this.ReorderLevelLabel.Name = "ReorderLevelLabel";
-            this.ReorderLevelLabel.Size = new System.Drawing.Size(450, 25);
-            this.ReorderLevelLabel.TabIndex = 62;
-            this.ReorderLevelLabel.Text = "<View>";
-            // 
-            // WarningLabel
-            // 
-            this.WarningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WarningLabel.Location = new System.Drawing.Point(978, 256);
-            this.WarningLabel.Name = "WarningLabel";
-            this.WarningLabel.Size = new System.Drawing.Size(308, 40);
-            this.WarningLabel.TabIndex = 64;
-            // 
-            // StockOutListView
-            // 
-            this.StockOutListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.StockOutListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StockOutListView.FullRowSelect = true;
-            this.StockOutListView.GridLines = true;
-            this.StockOutListView.Location = new System.Drawing.Point(29, 394);
-            this.StockOutListView.Margin = new System.Windows.Forms.Padding(20);
-            this.StockOutListView.Name = "StockOutListView";
-            this.StockOutListView.Size = new System.Drawing.Size(1276, 376);
-            this.StockOutListView.TabIndex = 65;
-            this.StockOutListView.UseCompatibleStateImageBehavior = false;
-            this.StockOutListView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "SI";
-            this.columnHeader1.Width = 56;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Item";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 236;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Company";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 286;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Quantity";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 232;
-            // 
             // StockOut
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -308,6 +311,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StockOut";
             this.Text = "StockOut";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.StockOut_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -321,9 +325,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox StockOutTextBox;
         private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button SalesButton;
+        private System.Windows.Forms.Button DamageButton;
+        private System.Windows.Forms.Button LostButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox CompanyNameComboBox;
         private System.Windows.Forms.ComboBox CategoryNameComboBox;
