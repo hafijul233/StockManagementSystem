@@ -7,14 +7,144 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using StockManagementSystem.BLL;
+using StockManagementSystem.Models;
 
 namespace StockManagementSystem.UI
 {
     public partial class StockOut : Form
     {
+        int serial = 0;
+
+        List<string> companyList = new List<string>();
+        List<string> categoryList = new List<string>();
+        List<string> itemList = new List<string>();
+        List<StockReport> stockOutList = new List<StockReport>();
+
         public StockOut()
         {
             InitializeComponent();
+        }
+
+        private void StockOut_Load(object sender, EventArgs e)
+        {
+            CompanyNameComboBox.Items.Clear();
+            CategoryNameComboBox.Items.Clear();
+            ItemNameComboBox.Items.Clear();
+
+            companyList = ViewItemController.GetCompanyList();
+            categoryList = ViewItemController.GetCategoryList();
+            itemList = ItemController.GetItemNameList("SELECT Name FROM ItemInfo");
+
+            foreach (var company in companyList)
+            {
+                CompanyNameComboBox.Items.Add(company.ToString());
+            }
+
+            foreach (var category in categoryList)
+            {
+                CategoryNameComboBox.Items.Add(category.ToString());
+            }
+
+            serial = 1;
+        }
+
+        private void CategoryNameComboBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            itemList.Clear();
+            ItemNameComboBox.Items.Clear();
+
+            string CategoryName = CategoryNameComboBox.Text;
+            string CompanyName = CompanyNameComboBox.Text;
+
+            itemList = ItemController.GetItemNameList("SELECT Name FROM ItemInfo WHERE CategoryName = '" + CategoryName + "' AND CompanyName = '" + CompanyName + "'");
+
+            foreach (var item in itemList)
+            {
+                ItemNameComboBox.Items.Add(item.ToString());
+            }
+
+        }
+
+        private void CompanyNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            itemList.Clear();
+            ItemNameComboBox.Items.Clear();
+
+            string CategoryName = CategoryNameComboBox.Text;
+            string CompanyName = CompanyNameComboBox.Text;
+
+            itemList = ItemController.GetItemNameList("SELECT Name FROM ItemInfo WHERE CategoryName = '" + CategoryName + "' AND CompanyName = '" + CompanyName + "'");
+
+            foreach (var item in itemList)
+            {
+                ItemNameComboBox.Items.Add(item.ToString());
+            }
+        }
+
+        private void ItemNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string[] StockStatus = new string[2];
+
+            string itemName = ItemNameComboBox.Text;
+
+            StockStatus = ItemController.GetStockValue(itemName);
+
+            ReorderLevelLabel.Text = StockStatus[0];
+            AvailableQuantityLabel.Text = StockStatus[1];
+        }
+
+        private void StockOutTextBox_TextChanged(object sender, EventArgs e)
+        {
+            decimal availableqty = Convert.ToDecimal(AvailableQuantityLabel.Text);
+            string stockString = StockOutTextBox.Text;
+
+            if (stockString != String.Empty)
+            {
+                foreach(char c in stockString)
+                {
+                    if(Char.IsDigit(c) == false && c != '.')
+                    {
+                        WarningLabel.Text = "Only Numbers and . allowed.";
+                        return;
+                    }
+                }
+
+                decimal stockOutvalue = Convert.ToDecimal(stockString);
+
+                if(availableqty < stockOutvalue)
+                {
+                    WarningLabel.Text = "InSufficient Items in Stock";
+                    StockOutTextBox.Text = String.Empty;
+                }
+
+            }
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            if(StockOutTextBox.Text == String.Empty)
+            {
+                WarningLabel.Text = "Stock Out Value is Empty";
+                return;
+            }
+
+            StockReport stockitem = new StockReport();
+
+            stockitem.ItemName = ItemNameComboBox.Text;
+            stockitem.CompanyName = CompanyNameComboBox.Text;
+            stockitem.StockQty = Convert.ToDecimal(StockOutTextBox.Text);
+
+            stockOutList.Add(stockitem);
+
+            string si = Convert.ToString(serial);
+
+            var lvi = new ListViewItem(new[] { si, stockitem.ItemName, stockitem.CompanyName, stockitem.StockQty.ToString()});
+
+            StockOutListView.Items.Add(lvi);
+            serial++;
+
+            StockOutTextBox.Text = String.Empty;
         }
     }
 }

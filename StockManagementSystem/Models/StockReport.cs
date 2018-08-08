@@ -8,7 +8,8 @@ namespace StockManagementSystem.Models
 {
     class StockReport
     {
-
-        public string Username { get; set; }
+        public string ItemName { get; set; }
+        public string CompanyName { get; set; }
+        public decimal StockQty { get; set; }
     }
 }
