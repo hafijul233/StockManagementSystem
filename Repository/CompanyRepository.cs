@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StockManagementSystem.Models
+namespace Repository
 {
-     public class Company
+    public class CompanyRepository
     {
-         public string CompanyName { get; set; }
-
     }
 }

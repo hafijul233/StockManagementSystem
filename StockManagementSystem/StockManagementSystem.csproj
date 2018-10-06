@@ -59,11 +59,6 @@
     <Compile Include="BLL\ViewItemController.cs" />
     <Compile Include="DAL\DBConnection.cs" />
     <Compile Include="Libraries\Configuration.cs" />
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Company.cs" />
-    <Compile Include="Models\Item.cs" />
-    <Compile Include="Models\StockReport.cs" />
-    <Compile Include="Models\User.cs" />
     <Compile Include="UI\CategorySetup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,7 +196,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{33861265-276e-4fed-91b4-f5d9a18e591b}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{fa3c109a-2d08-4da8-9d77-abd591398695}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Database\Hafiz-SMS-06082018_04-04.sql" />
     <Content Include="Database\Hafiz-SMS-09082018_05-49.sql" />
@@ -219,6 +223,9 @@
     <None Include="Resources\StockIn.ico" />
     <None Include="Resources\StockOut.ico" />
     <Content Include="Resources\UserProfilePic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
