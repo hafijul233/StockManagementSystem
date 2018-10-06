@@ -50,6 +50,7 @@ namespace StockManagementSystem.UI
             SalesListView.Columns.Add("Quantity");
 
 
+
             if (dataReader.HasRows)
             {
                 while (dataReader.Read())
