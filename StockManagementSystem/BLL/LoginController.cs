@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using StockManagementSystem.DAL;
-using StockManagementSystem.Models;
+using Models;
 
 
 namespace StockManagementSystem.BLL

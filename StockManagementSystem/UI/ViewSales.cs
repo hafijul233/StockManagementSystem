@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using StockManagementSystem.DAL;
-using StockManagementSystem.Models;
+using Models;
 
 namespace StockManagementSystem.UI
 {

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using StockManagementSystem.DAL;
 using StockManagementSystem.Utilities;
-using StockManagementSystem.Models;
+using Models;
 
 namespace StockManagementSystem.UI
 {

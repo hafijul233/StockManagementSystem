@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using StockManagementSystem.Models;
+using Models;
 using StockManagementSystem.DAL;
 using System.Data;
 

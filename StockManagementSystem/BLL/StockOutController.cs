@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StockManagementSystem.BLL;
 using StockManagementSystem.DAL;
-using StockManagementSystem.Models;
+using Models;
 
 
 

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using StockManagementSystem.UI;
 using StockManagementSystem.Libraries;
-using StockManagementSystem.Models;
+using Models;
 using StockManagementSystem.DAL;
 using StockManagementSystem.BLL;
 using StockManagementSystem.Utilities;

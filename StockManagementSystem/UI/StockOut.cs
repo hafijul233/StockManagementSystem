@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using StockManagementSystem.BLL;
-using StockManagementSystem.Models;
+using Models;
 
 namespace StockManagementSystem.UI
 {
